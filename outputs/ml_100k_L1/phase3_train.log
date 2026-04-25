@@ -1,0 +1,23 @@
+========================================================================
+CGM-Rec Phase 3 Train Summary (Dual Optimization)
+========================================================================
+Dataset               : ml_100k
+Warm-up samples       : 40
+Train stream samples  : 160
+Epochs                : 5
+Learning rate         : 0.05
+Average loss          : 6.171547
+Metrics               : {'HIT@1': 0.31375, 'NDCG@1': 0.31375, 'HIT@5': 0.61625, 'NDCG@5': 0.4732466609340447, 'HIT@10': 0.76125, 'NDCG@10': 0.5190825641311816, 'HIT@20': 1.0, 'NDCG@20': 0.5795295570926045, 'avg_rank': 5.93875}
+Structural edits      : {'stored_episodes': 800, 'reinforced_edges': 1972, 'suppressed_edges': 1500, 'tentative_edges': 302, 'rejected_edits': 40, 'promoted_edges': 51}
+Weights               :
+  - shared_categories: 0.212490
+  - shared_keywords: 0.147274
+  - co_occur_score: 1.722856
+  - candidate_category_count: -0.200675
+  - candidate_keyword_count: -0.000000
+  - has_description: 0.004084
+  - candidate_in_degree: -0.087916
+Bias                  : 0.000000
+========================================================================
+Saved scorer weights to /home/may1-idsailab/Documents/Hao/cgm/outputs/ml_100k/scorer_weights.json
+Saved summary JSON to /home/may1-idsailab/Documents/Hao/cgm/outputs/ml_100k/phase3_train.json

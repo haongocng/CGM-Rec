@@ -1,0 +1,60 @@
+{
+  "dataset_name": "ml_100k",
+  "paths": {
+    "train_path": "/home/may1-idsailab/Documents/Hao/cgm/dataset/ml_100k/train_ml100k.json",
+    "test_path": "/home/may1-idsailab/Documents/Hao/cgm/dataset/ml_100k/test_ml100k.json",
+    "info_path": "/home/may1-idsailab/Documents/Hao/cgm/dataset/ml_100k/info_ML100k.json"
+  },
+  "counts": {
+    "train_samples": 200,
+    "test_samples": 743,
+    "products": 1500,
+    "warmup_samples": 40,
+    "continual_stream_samples": 160
+  },
+  "warmup": {
+    "mode": "ratio",
+    "ratio": 0.2,
+    "count": 50,
+    "chronological": true
+  },
+  "examples": {
+    "train_sample_id": "train_00000",
+    "train_target": "The Magnificent Seven",
+    "train_target_position": 19,
+    "train_target_index": 20,
+    "train_target_index_base": "one_based",
+    "train_session_items": [
+      "Candyman: Farewell to the Flesh",
+      "Maverick",
+      "The Santa Clause",
+      "Sirens",
+      "With Honors"
+    ],
+    "train_candidate_items": [
+      "M",
+      "Smoke",
+      "Bound",
+      "Four Rooms",
+      "8 Seconds"
+    ],
+    "test_sample_id": "test_00000",
+    "test_target": "Tales from the Crypt Presents: Bordello of Blood",
+    "product_example": {
+      "title": "The Magnificent Seven",
+      "taxonomy_levels": {
+        "Level_1": "Action, Suspense & Speculative Entertainment",
+        "Level_2": "Western Action & Comedy",
+        "Level_3": "Gunslinger Westerns"
+      },
+      "keywords": [
+        "Western",
+        "Action",
+        "Adventure",
+        "Heroism",
+        "Revenge"
+      ],
+      "description_preview": "Looking to mine for gold, greedy industrialist Bartholomew Bogue seizes control of the Old West town of Rose Creek. With their lives in jeopardy, Emma Cullen..."
+    }
+  }
+}

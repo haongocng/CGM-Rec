@@ -1,0 +1,24 @@
+========================================================================
+CGM-Rec Phase 1 Dataset Inspection
+========================================================================
+Dataset               : ml_100k
+Train samples         : 200
+Test samples          : 743
+Products              : 1500
+Warm-up samples       : 40
+Continual stream      : 160
+Warm-up mode          : ratio
+Chronological split   : True
+------------------------------------------------------------------------
+Example train sample  : train_00000
+Target                : The Magnificent Seven
+Target index check    : raw=20 position=19 base=one_based
+Session preview       : ['Candyman: Farewell to the Flesh', 'Maverick', 'The Santa Clause', 'Sirens', 'With Honors']
+Candidate preview     : ['M', 'Smoke', 'Bound', 'Four Rooms', '8 Seconds']
+------------------------------------------------------------------------
+Metadata example      : The Magnificent Seven
+Taxonomy              : {'Level_1': 'Action, Suspense & Speculative Entertainment', 'Level_2': 'Western Action & Comedy', 'Level_3': 'Gunslinger Westerns'}
+Keywords              : ['Western', 'Action', 'Adventure', 'Heroism', 'Revenge']
+Description preview   : Looking to mine for gold, greedy industrialist Bartholomew Bogue seizes control of the Old West town of Rose Creek. With their lives in jeopardy, Emma Cullen...
+========================================================================
+Saved summary JSON to /home/may1-idsailab/Documents/Hao/cgm/outputs/ml_100k/phase1_data.json

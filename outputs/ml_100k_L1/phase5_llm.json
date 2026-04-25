@@ -1,0 +1,3140 @@
+{
+  "dataset_name": "ml_100k",
+  "phase": "phase5-test-llm",
+  "llm_provider": "mock",
+  "test_samples": 743,
+  "full_test_samples": 743,
+  "metrics": {
+    "HIT@1": 0.2570659488559892,
+    "NDCG@1": 0.2570659488559892,
+    "HIT@5": 0.5720053835800808,
+    "NDCG@5": 0.4221314008799304,
+    "HIT@10": 0.7402422611036339,
+    "NDCG@10": 0.4759179089175118,
+    "HIT@20": 1.0,
+    "NDCG@20": 0.5402986993029258,
+    "avg_rank": 6.678331090174966
+  },
+  "parser_valid_rate": 1.0,
+  "fallback_rate": 0.0,
+  "lesson_valid_rate": 1.0,
+  "edit_counts": {
+    "stored_episodes": 743,
+    "reinforced_edges": 1699,
+    "suppressed_edges": 1392,
+    "tentative_edges": 516,
+    "rejected_edits": 0,
+    "promoted_edges": 136
+  },
+  "episodic_summary": {
+    "records": 500,
+    "max_records": 500,
+    "success_records": 287,
+    "failure_records": 213
+  },
+  "semantic_summary": {
+    "edge_count": 26135,
+    "relations": {
+      "belongs_to": 5166,
+      "has_keyword": 7500,
+      "has_description": 1496,
+      "co_occurs_with": 11973
+    }
+  },
+  "examples": [
+    {
+      "sample_id": "test_00000",
+      "target": "Tales from the Crypt Presents: Bordello of Blood",
+      "target_rank": 2,
+      "scorer_top5": [
+        "Gandhi",
+        "Tales from the Crypt Presents: Bordello of Blood",
+        "First Knight",
+        "It Could Happen to You",
+        "Dracula: Dead and Loving It"
+      ],
+      "llm_top5": [
+        "Gandhi",
+        "Tales from the Crypt Presents: Bordello of Blood",
+        "First Knight",
+        "It Could Happen to You",
+        "Dracula: Dead and Loving It"
+      ],
+      "final_top5": [
+        "Gandhi",
+        "Tales from the Crypt Presents: Bordello of Blood",
+        "First Knight",
+        "It Could Happen to You",
+        "Dracula: Dead and Loving It"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 4,
+        "suppressed_edges": 0,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00001",
+      "target": "The Godfather: Part II",
+      "target_rank": 6,
+      "scorer_top5": [
+        "The Piano",
+        "Aliens",
+        "Heavy Metal",
+        "Sabrina",
+        "Multiplicity"
+      ],
+      "llm_top5": [
+        "The Piano",
+        "Aliens",
+        "Heavy Metal",
+        "Sabrina",
+        "Multiplicity"
+      ],
+      "final_top5": [
+        "The Piano",
+        "Aliens",
+        "Heavy Metal",
+        "Sabrina",
+        "Multiplicity"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 6,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00002",
+      "target": "The Third Man",
+      "target_rank": 13,
+      "scorer_top5": [
+        "The Fugitive",
+        "The Blues Brothers",
+        "Aladdin",
+        "Aliens",
+        "Jumanji"
+      ],
+      "llm_top5": [
+        "The Fugitive",
+        "The Blues Brothers",
+        "Aladdin",
+        "Aliens",
+        "Jumanji"
+      ],
+      "final_top5": [
+        "The Fugitive",
+        "The Blues Brothers",
+        "Aladdin",
+        "Aliens",
+        "Jumanji"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 4,
+        "tentative_edges": 2,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00003",
+      "target": "Air Force One",
+      "target_rank": 2,
+      "scorer_top5": [
+        "Scream",
+        "Air Force One",
+        "Up Close and Personal",
+        "'Til There Was You",
+        "Freeway"
+      ],
+      "llm_top5": [
+        "Scream",
+        "Air Force One",
+        "Up Close and Personal",
+        "'Til There Was You",
+        "Freeway"
+      ],
+      "final_top5": [
+        "Scream",
+        "Air Force One",
+        "Up Close and Personal",
+        "'Til There Was You",
+        "Freeway"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 4,
+        "suppressed_edges": 0,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00004",
+      "target": "Toy Story",
+      "target_rank": 1,
+      "scorer_top5": [
+        "Toy Story",
+        "Michael",
+        "Four Rooms",
+        "Gattaca",
+        "Con Air"
+      ],
+      "llm_top5": [
+        "Toy Story",
+        "Michael",
+        "Four Rooms",
+        "Gattaca",
+        "Con Air"
+      ],
+      "final_top5": [
+        "Toy Story",
+        "Michael",
+        "Four Rooms",
+        "Gattaca",
+        "Con Air"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 4,
+        "suppressed_edges": 0,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00005",
+      "target": "The Bridge on the River Kwai",
+      "target_rank": 14,
+      "scorer_top5": [
+        "The Graduate",
+        "Desperado",
+        "Beautiful Girls",
+        "The Game",
+        "House Party 3"
+      ],
+      "llm_top5": [
+        "The Graduate",
+        "Desperado",
+        "Beautiful Girls",
+        "The Game",
+        "House Party 3"
+      ],
+      "final_top5": [
+        "The Graduate",
+        "Desperado",
+        "Beautiful Girls",
+        "The Game",
+        "House Party 3"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 4,
+        "tentative_edges": 2,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00006",
+      "target": "Apt Pupil",
+      "target_rank": 5,
+      "scorer_top5": [
+        "Aliens",
+        "Unforgiven",
+        "L.A. Confidential",
+        "The Innocent",
+        "Apt Pupil"
+      ],
+      "llm_top5": [
+        "Aliens",
+        "Unforgiven",
+        "L.A. Confidential",
+        "The Innocent",
+        "Apt Pupil"
+      ],
+      "final_top5": [
+        "Aliens",
+        "Unforgiven",
+        "L.A. Confidential",
+        "The Innocent",
+        "Apt Pupil"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 4,
+        "suppressed_edges": 0,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00007",
+      "target": "First Knight",
+      "target_rank": 2,
+      "scorer_top5": [
+        "As Good As It Gets",
+        "First Knight",
+        "Aliens",
+        "Michael Collins",
+        "It Could Happen to You"
+      ],
+      "llm_top5": [
+        "As Good As It Gets",
+        "First Knight",
+        "Aliens",
+        "Michael Collins",
+        "It Could Happen to You"
+      ],
+      "final_top5": [
+        "As Good As It Gets",
+        "First Knight",
+        "Aliens",
+        "Michael Collins",
+        "It Could Happen to You"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 4,
+        "suppressed_edges": 0,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00008",
+      "target": "Clockwork Orange, A",
+      "target_rank": 1,
+      "scorer_top5": [
+        "Clockwork Orange, A",
+        "Deceiver",
+        "Backbeat",
+        "Kingpin",
+        "GoodFellas"
+      ],
+      "llm_top5": [
+        "Clockwork Orange, A",
+        "Deceiver",
+        "Backbeat",
+        "Kingpin",
+        "GoodFellas"
+      ],
+      "final_top5": [
+        "Clockwork Orange, A",
+        "Deceiver",
+        "Backbeat",
+        "Kingpin",
+        "GoodFellas"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 4,
+        "suppressed_edges": 0,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00009",
+      "target": "The Crying Game",
+      "target_rank": 15,
+      "scorer_top5": [
+        "Highlander",
+        "Three Wishes",
+        "Jack",
+        "Beautiful Girls",
+        "She's So Lovely"
+      ],
+      "llm_top5": [
+        "Highlander",
+        "Three Wishes",
+        "Jack",
+        "Beautiful Girls",
+        "She's So Lovely"
+      ],
+      "final_top5": [
+        "Highlander",
+        "Three Wishes",
+        "Jack",
+        "Beautiful Girls",
+        "She's So Lovely"
+      ],
+      "fallback_used": false,
+      "parser_valid": true,
+      "lesson_valid": true,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 4,
+        "tentative_edges": 2,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    }
+  ],
+  "audit_log_preview": [
+    {
+      "step_index": 0,
+      "sample_id": "test_00000",
+      "outcome_type": "success",
+      "target_rank": 2,
+      "episode_id": "episode_000000",
+      "result": {
+        "episode_id": "episode_000000",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 4,
+          "suppressed_edges": 0,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::the sting",
+              "relation": "co_occurs_with",
+              "dst": "item::tales from the crypt presents: bordello of blood",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 5.168566864145607,
+                "session_item": "The Sting"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.8175,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.6,
+                "confidence_signal": 0.7000000000000001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.828651611553785,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the sting",
+              "relation": "co_occurs_with",
+              "dst": "item::tales from the crypt presents: bordello of blood",
+              "weight": 3.2,
+              "confidence": 0.7500000000000001,
+              "support_count": 4,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 0,
+                "write_score": 0.8175
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::tales from the crypt presents: bordello of blood",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::imagination, adventure & enchanted realms",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking aligned with shared semantic evidence.",
+              "evidence": {
+                "feature": "shared_categories",
+                "contribution": 0.6374707535281496,
+                "shared_neighbor": "Imagination, Adventure & Enchanted Realms"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.7837500000000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.828651611553785,
+                "advice_signal": 0.075
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::tales from the crypt presents: bordello of blood",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::imagination, adventure & enchanted realms",
+              "weight": 1.2,
+              "confidence": 1.0,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "reinforce_edge",
+                "last_updated_step": 0,
+                "write_score": 0.7837500000000001
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::tales from the crypt presents: bordello of blood",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::adventure, fantasy & science fiction",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking aligned with shared semantic evidence.",
+              "evidence": {
+                "feature": "shared_categories",
+                "contribution": 0.6374707535281496,
+                "shared_neighbor": "Adventure, Fantasy & Science Fiction"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.7837500000000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.828651611553785,
+                "advice_signal": 0.075
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::tales from the crypt presents: bordello of blood",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::adventure, fantasy & science fiction",
+              "weight": 1.2,
+              "confidence": 1.0,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "reinforce_edge",
+                "last_updated_step": 0,
+                "write_score": 0.7837500000000001
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::tales from the crypt presents: bordello of blood",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::dark fantasies",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking aligned with shared semantic evidence.",
+              "evidence": {
+                "feature": "shared_categories",
+                "contribution": 0.6374707535281496,
+                "shared_neighbor": "Dark Fantasies"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.7837500000000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.828651611553785,
+                "advice_signal": 0.075
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::tales from the crypt presents: bordello of blood",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::dark fantasies",
+              "weight": 1.2,
+              "confidence": 1.0,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "reinforce_edge",
+                "last_updated_step": 0,
+                "write_score": 0.7837500000000001
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 0,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 0,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 1,
+      "sample_id": "test_00001",
+      "outcome_type": "failure",
+      "target_rank": 6,
+      "episode_id": "episode_000001",
+      "result": {
+        "episode_id": "episode_000001",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 6,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::room with a view, a",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Piano",
+                "contribution": 27.565689942109902
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.6975,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.1,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 1.0,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999912955392,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::room with a view, a",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight": 6.85,
+              "confidence": 0.96,
+              "support_count": 7,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 1,
+                "write_score": 0.6975
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::groundhog day",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Piano",
+                "contribution": 27.565689942109902
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.5975,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.1,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.4,
+                "confidence_signal": 0.6000000000000001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999912955392,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::groundhog day",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight": 1.85,
+              "confidence": 0.56,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 1,
+                "write_score": 0.5975
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::the remains of the day",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Piano",
+                "contribution": 27.565689942109902
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.6575000000000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.1,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.8,
+                "confidence_signal": 0.8,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999912955392,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the remains of the day",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight": 3.85,
+              "confidence": 0.76,
+              "support_count": 4,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 1,
+                "write_score": 0.6575000000000001
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::grease",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Piano",
+                "contribution": 27.565689942109902
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.5675,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.1,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.5,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999912955392,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::grease",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight": 0.85,
+              "confidence": 0.46,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 1,
+                "write_score": 0.5675
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::the brothers mcmullen",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Piano",
+                "contribution": 27.565689942109902
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.5675,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.1,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.5,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999912955392,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the brothers mcmullen",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight": 0.85,
+              "confidence": 0.46,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 1,
+                "write_score": 0.5675
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::star wars",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Piano",
+                "contribution": 27.565689942109902
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.5675,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.1,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.5,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999912955392,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::star wars",
+              "relation": "co_occurs_with",
+              "dst": "item::the piano",
+              "weight": 0.85,
+              "confidence": 0.46,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 1,
+                "write_score": 0.5675
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 0,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25968,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 2,
+      "sample_id": "test_00002",
+      "outcome_type": "failure",
+      "target_rank": 13,
+      "episode_id": "episode_000002",
+      "result": {
+        "episode_id": "episode_000002",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 4,
+          "tentative_edges": 2,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::the princess bride",
+              "relation": "co_occurs_with",
+              "dst": "item::the third man",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 13,
+                "target_probability": 1.014984829776229e-06,
+                "session_item": "The Princess Bride"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.7849998477522756,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9999989850151703,
+                "advice_signal": 0.35
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the princess bride",
+              "relation": "co_occurs_with",
+              "dst": "item::the third man",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 2,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 2,
+                "write_score": 0.7849998477522756,
+                "tentative": true,
+                "created_step": 2
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::being there",
+              "relation": "co_occurs_with",
+              "dst": "item::the third man",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 13,
+                "target_probability": 1.014984829776229e-06,
+                "session_item": "Being There"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.7849998477522756,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9999989850151703,
+                "advice_signal": 0.35
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::being there",
+              "relation": "co_occurs_with",
+              "dst": "item::the third man",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 2,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 2,
+                "write_score": 0.7849998477522756,
+                "tentative": true,
+                "created_step": 2
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::seven (se7en)",
+              "relation": "co_occurs_with",
+              "dst": "item::the fugitive",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Fugitive",
+                "contribution": 15.490194891844382
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.83743,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.6,
+                "confidence_signal": 0.6993,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999989850151703,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::seven (se7en)",
+              "relation": "co_occurs_with",
+              "dst": "item::the fugitive",
+              "weight": 2.847,
+              "confidence": 0.6593,
+              "support_count": 3,
+              "source_kind": "online_update",
+              "last_update_step": 2,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 2,
+                "write_score": 0.83743
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::the empire strikes back",
+              "relation": "co_occurs_with",
+              "dst": "item::the fugitive",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Fugitive",
+                "contribution": 15.490194891844382
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.83743,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.6,
+                "confidence_signal": 0.6993,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999989850151703,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the empire strikes back",
+              "relation": "co_occurs_with",
+              "dst": "item::the fugitive",
+              "weight": 2.847,
+              "confidence": 0.6593,
+              "support_count": 3,
+              "source_kind": "online_update",
+              "last_update_step": 2,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 563,
+                "write_score": 0.6801397705355768
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::the magnificent seven",
+              "relation": "co_occurs_with",
+              "dst": "item::the fugitive",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Fugitive",
+                "contribution": 15.490194891844382
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8074399999999999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.4,
+                "confidence_signal": 0.5994,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999989850151703,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the magnificent seven",
+              "relation": "co_occurs_with",
+              "dst": "item::the fugitive",
+              "weight": 1.848,
+              "confidence": 0.5594,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 2,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 142,
+                "write_score": 0.8261771704738171
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::raiders of the lost ark",
+              "relation": "co_occurs_with",
+              "dst": "item::the fugitive",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Fugitive",
+                "contribution": 15.490194891844382
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.77745,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.4995,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999989850151703,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::raiders of the lost ark",
+              "relation": "co_occurs_with",
+              "dst": "item::the fugitive",
+              "weight": 0.849,
+              "confidence": 0.4595,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 2,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 686,
+                "write_score": 0.7607013883827131
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 0,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 3,
+      "sample_id": "test_00003",
+      "outcome_type": "success",
+      "target_rank": 2,
+      "episode_id": "episode_000003",
+      "result": {
+        "episode_id": "episode_000003",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 4,
+          "suppressed_edges": 0,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::men in black",
+              "relation": "co_occurs_with",
+              "dst": "item::air force one",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 22.352351228931443,
+                "session_item": "Men in Black"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.73740005,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.4990005,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999957205669,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::men in black",
+              "relation": "co_occurs_with",
+              "dst": "item::air force one",
+              "weight": 1.198001,
+              "confidence": 0.5490005,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 3,
+                "write_score": 0.73740005
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::tomorrow never dies",
+              "relation": "co_occurs_with",
+              "dst": "item::air force one",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 22.352351228931443,
+                "session_item": "Tomorrow Never Dies"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.73740005,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.4990005,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999957205669,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::tomorrow never dies",
+              "relation": "co_occurs_with",
+              "dst": "item::air force one",
+              "weight": 1.198001,
+              "confidence": 0.5490005,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 3,
+                "write_score": 0.73740005
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::apocalypse now",
+              "relation": "co_occurs_with",
+              "dst": "item::air force one",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 22.352351228931443,
+                "session_item": "Apocalypse Now"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.81736007,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.6,
+                "confidence_signal": 0.6986007000000001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999957205669,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::apocalypse now",
+              "relation": "co_occurs_with",
+              "dst": "item::air force one",
+              "weight": 3.194003,
+              "confidence": 0.7486007000000001,
+              "support_count": 4,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 3,
+                "write_score": 0.81736007
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::gattaca",
+              "relation": "co_occurs_with",
+              "dst": "item::air force one",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 22.352351228931443,
+                "session_item": "Gattaca"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.85734008,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.8,
+                "confidence_signal": 0.7984008,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999957205669,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::gattaca",
+              "relation": "co_occurs_with",
+              "dst": "item::air force one",
+              "weight": 4.192004,
+              "confidence": 0.8484008000000001,
+              "support_count": 5,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 3,
+                "write_score": 0.85734008
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 2,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 4,
+      "sample_id": "test_00004",
+      "outcome_type": "success",
+      "target_rank": 1,
+      "episode_id": "episode_000004",
+      "result": {
+        "episode_id": "episode_000004",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 4,
+          "suppressed_edges": 0,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::liar liar",
+              "relation": "co_occurs_with",
+              "dst": "item::toy story",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 49.81307441949022,
+                "session_item": "Liar Liar"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.8672902099299998,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.6,
+                "confidence_signal": 0.6979020993,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0436096431476471e-14,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::liar liar",
+              "relation": "co_occurs_with",
+              "dst": "item::toy story",
+              "weight": 3.191008997,
+              "confidence": 0.7479020993000001,
+              "support_count": 4,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 619,
+                "write_score": 0.8679626686906603
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::the rock",
+              "relation": "co_occurs_with",
+              "dst": "item::toy story",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 49.81307441949022,
+                "session_item": "The Rock"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.9572002998999999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 1.0,
+                "confidence_signal": 0.997002999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0436096431476471e-14,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the rock",
+              "relation": "co_occurs_with",
+              "dst": "item::toy story",
+              "weight": 8.176023992,
+              "confidence": 1.0,
+              "support_count": 9,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 4,
+                "write_score": 0.9572002998999999
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::twelve monkeys",
+              "relation": "co_occurs_with",
+              "dst": "item::toy story",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 49.81307441949022,
+                "session_item": "Twelve Monkeys"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.9072602399199999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.8,
+                "confidence_signal": 0.7976023992,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0436096431476471e-14,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::twelve monkeys",
+              "relation": "co_occurs_with",
+              "dst": "item::toy story",
+              "weight": 4.188011996,
+              "confidence": 0.8476023992,
+              "support_count": 5,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 4,
+                "write_score": 0.9072602399199999
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::trainspotting",
+              "relation": "co_occurs_with",
+              "dst": "item::toy story",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 49.81307441949022,
+                "session_item": "Trainspotting"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.82732017994,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.4,
+                "confidence_signal": 0.5982017994000001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0436096431476471e-14,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::trainspotting",
+              "relation": "co_occurs_with",
+              "dst": "item::toy story",
+              "weight": 2.194005998,
+              "confidence": 0.6482017994000001,
+              "support_count": 3,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 4,
+                "write_score": 0.82732017994
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 2,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 5,
+      "sample_id": "test_00005",
+      "outcome_type": "failure",
+      "target_rank": 14,
+      "episode_id": "episode_000005",
+      "result": {
+        "episode_id": "episode_000005",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 4,
+          "tentative_edges": 2,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::little women",
+              "relation": "co_occurs_with",
+              "dst": "item::the bridge on the river kwai",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 14,
+                "target_probability": 7.491683962336131e-11,
+                "session_item": "Little Women"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.8099999999887625,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.9,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9999999999250831,
+                "advice_signal": 0.35
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::little women",
+              "relation": "co_occurs_with",
+              "dst": "item::the bridge on the river kwai",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 5,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 5,
+                "write_score": 0.8099999999887625,
+                "tentative": true,
+                "created_step": 5
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::room with a view, a",
+              "relation": "co_occurs_with",
+              "dst": "item::the bridge on the river kwai",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 14,
+                "target_probability": 7.491683962336131e-11,
+                "session_item": "Room with a View, A"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.8099999999887625,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.9,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9999999999250831,
+                "advice_signal": 0.35
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::room with a view, a",
+              "relation": "co_occurs_with",
+              "dst": "item::the bridge on the river kwai",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 5,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 5,
+                "write_score": 0.8099999999887625,
+                "tentative": true,
+                "created_step": 5
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::gandhi",
+              "relation": "co_occurs_with",
+              "dst": "item::the graduate",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Graduate",
+                "contribution": 25.73961793710555
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.83726035976006,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.9,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.4,
+                "confidence_signal": 0.5976035976006001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999250831,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::gandhi",
+              "relation": "co_occurs_with",
+              "dst": "item::the graduate",
+              "weight": 1.8420119920020002,
+              "confidence": 0.5576035976006001,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 5,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 580,
+                "write_score": 0.5688989994228593
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::the empire strikes back",
+              "relation": "co_occurs_with",
+              "dst": "item::the graduate",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Graduate",
+                "contribution": 25.73961793710555
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8073002998000499,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.9,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.4980029980005,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999250831,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the empire strikes back",
+              "relation": "co_occurs_with",
+              "dst": "item::the graduate",
+              "weight": 0.846005996001,
+              "confidence": 0.45800299800050004,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 5,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 557,
+                "write_score": 0.813890786503167
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::dances with wolves",
+              "relation": "co_occurs_with",
+              "dst": "item::the graduate",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Graduate",
+                "contribution": 25.73961793710555
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.89718047968008,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.9,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.8,
+                "confidence_signal": 0.7968047968008,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999250831,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::dances with wolves",
+              "relation": "co_occurs_with",
+              "dst": "item::the graduate",
+              "weight": 3.8340239840040002,
+              "confidence": 0.7568047968007999,
+              "support_count": 4,
+              "source_kind": "online_update",
+              "last_update_step": 5,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 304,
+                "write_score": 0.7836693460186733
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::the godfather: part ii",
+              "relation": "co_occurs_with",
+              "dst": "item::the graduate",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "The Graduate",
+                "contribution": 25.73961793710555
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8073002998000499,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.9,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.4980029980005,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999250831,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the godfather: part ii",
+              "relation": "co_occurs_with",
+              "dst": "item::the graduate",
+              "weight": 0.846005996001,
+              "confidence": 0.45800299800050004,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 5,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 5,
+                "write_score": 0.8073002998000499
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 2,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 6,
+      "sample_id": "test_00006",
+      "outcome_type": "success",
+      "target_rank": 5,
+      "episode_id": "episode_000006",
+      "result": {
+        "episode_id": "episode_000006",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 4,
+          "suppressed_edges": 0,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::titanic",
+              "relation": "co_occurs_with",
+              "dst": "item::apt pupil",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 3.4285171092224593,
+                "session_item": "Titanic"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.6272005994002999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.2,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.4,
+                "confidence_signal": 0.5970059940029995,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.999999949966532,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::titanic",
+              "relation": "co_occurs_with",
+              "dst": "item::apt pupil",
+              "weight": 2.190019980009998,
+              "confidence": 0.6470059940029995,
+              "support_count": 3,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 6,
+                "write_score": 0.6272005994002999
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::apt pupil",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking aligned with shared semantic evidence.",
+              "evidence": {
+                "feature": "shared_categories",
+                "contribution": 0.4249805023520997,
+                "shared_neighbor": "Action, Suspense & Speculative Entertainment"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.6332509990005,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.2,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.995009990004999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.999999949966532,
+                "advice_signal": 0.075
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::apt pupil",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight": 1.195009990004999,
+              "confidence": 1.0,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "reinforce_edge",
+                "last_updated_step": 6,
+                "write_score": 0.6332509990005
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::apt pupil",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking aligned with shared semantic evidence.",
+              "evidence": {
+                "feature": "shared_categories",
+                "contribution": 0.4249805023520997,
+                "shared_neighbor": "Crime, Thriller & Action"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.6332509990005,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.2,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.995009990004999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.999999949966532,
+                "advice_signal": 0.075
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::apt pupil",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight": 1.195009990004999,
+              "confidence": 1.0,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "reinforce_edge",
+                "last_updated_step": 6,
+                "write_score": 0.6332509990005
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::apt pupil",
+              "relation": "has_keyword",
+              "dst": "kw::drama",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking aligned with shared semantic evidence.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "contribution": 0.44182222649904523,
+                "shared_neighbor": "Drama"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.62330089910045,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.2,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.895508991004499,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.999999949966532,
+                "advice_signal": 0.075
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::apt pupil",
+              "relation": "has_keyword",
+              "dst": "kw::drama",
+              "weight": 1.095508991004499,
+              "confidence": 0.945508991004499,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "keyword_rank": 1,
+                "last_action": "reinforce_edge",
+                "last_updated_step": 6,
+                "write_score": 0.62330089910045
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 4,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 7,
+      "sample_id": "test_00007",
+      "outcome_type": "success",
+      "target_rank": 2,
+      "episode_id": "episode_000007",
+      "result": {
+        "episode_id": "episode_000007",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 4,
+          "suppressed_edges": 0,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::star wars",
+              "relation": "co_occurs_with",
+              "dst": "item::first knight",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 10.27526577633971,
+                "session_item": "Star Wars"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.8170810486010496,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.6,
+                "confidence_signal": 0.6958104860104959,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999024,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::star wars",
+              "relation": "co_occurs_with",
+              "dst": "item::first knight",
+              "weight": 3.1820449400449817,
+              "confidence": 0.7458104860104959,
+              "support_count": 4,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 637,
+                "write_score": 0.7672484849103719
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::french kiss",
+              "relation": "co_occurs_with",
+              "dst": "item::first knight",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 10.27526577633971,
+                "session_item": "French Kiss"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.8170810486010496,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.6,
+                "confidence_signal": 0.6958104860104959,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999024,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::french kiss",
+              "relation": "co_occurs_with",
+              "dst": "item::first knight",
+              "weight": 3.1820449400449817,
+              "confidence": 0.7458104860104959,
+              "support_count": 4,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 7,
+                "write_score": 0.8170810486010496
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::first knight",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::imagination, adventure & enchanted realms",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking aligned with shared semantic evidence.",
+              "evidence": {
+                "feature": "shared_categories",
+                "contribution": 0.4249805023520997,
+                "shared_neighbor": "Imagination, Adventure & Enchanted Realms"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.7831514980014995,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.994014980014994,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999024,
+                "advice_signal": 0.075
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::first knight",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::imagination, adventure & enchanted realms",
+              "weight": 1.194014980014994,
+              "confidence": 1.0,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 637,
+                "write_score": 0.7320456906023075
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::first knight",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::adventure, fantasy & science fiction",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking aligned with shared semantic evidence.",
+              "evidence": {
+                "feature": "shared_categories",
+                "contribution": 0.4249805023520997,
+                "shared_neighbor": "Adventure, Fantasy & Science Fiction"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.7831514980014995,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.8,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.994014980014994,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999024,
+                "advice_signal": 0.075
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::first knight",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::adventure, fantasy & science fiction",
+              "weight": 1.194014980014994,
+              "confidence": 1.0,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "reinforce_edge",
+                "last_updated_step": 7,
+                "write_score": 0.7831514980014995
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 4,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 8,
+      "sample_id": "test_00008",
+      "outcome_type": "success",
+      "target_rank": 1,
+      "episode_id": "episode_000008",
+      "result": {
+        "episode_id": "episode_000008",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 4,
+          "suppressed_edges": 0,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::the shining",
+              "relation": "co_occurs_with",
+              "dst": "item::clockwork orange, a",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 22.240812772887303,
+                "session_item": "The Shining"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.8670114675524484,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.6,
+                "confidence_signal": 0.6951146755244854,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.002350355641571933,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the shining",
+              "relation": "co_occurs_with",
+              "dst": "item::clockwork orange, a",
+              "weight": 3.179062895104937,
+              "confidence": 0.7451146755244854,
+              "support_count": 4,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 8,
+                "write_score": 0.8670114675524484
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::star wars",
+              "relation": "co_occurs_with",
+              "dst": "item::clockwork orange, a",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 22.240812772887303,
+                "session_item": "Star Wars"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.7871510482517489,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.4965104825174895,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.002350355641571933,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::star wars",
+              "relation": "co_occurs_with",
+              "dst": "item::clockwork orange, a",
+              "weight": 1.193020965034979,
+              "confidence": 0.5465104825174896,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 8,
+                "write_score": 0.7871510482517489
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::toy story",
+              "relation": "co_occurs_with",
+              "dst": "item::clockwork orange, a",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 22.240812772887303,
+                "session_item": "Toy Story"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.7871510482517489,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.4965104825174895,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.002350355641571933,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::toy story",
+              "relation": "co_occurs_with",
+              "dst": "item::clockwork orange, a",
+              "weight": 1.193020965034979,
+              "confidence": 0.5465104825174896,
+              "support_count": 2,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 8,
+                "write_score": 0.7871510482517489
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "reinforce_edge",
+              "src": "item::the piano",
+              "relation": "co_occurs_with",
+              "dst": "item::clockwork orange, a",
+              "weight_delta": 0.2,
+              "confidence_delta": 0.05,
+              "support_delta": 1,
+              "reason": "Successful ranking was supported by recent co-occurrence evidence.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "contribution": 22.240812772887303,
+                "session_item": "The Piano"
+              }
+            },
+            "write_score": {
+              "action": "reinforce_edge",
+              "value": 0.946871886853148,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 1.0,
+                "confidence_signal": 0.893718868531481,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.002350355641571933,
+                "advice_signal": 0.15
+              },
+              "rationale": "Reinforce when evidence contribution and support are strong. Success outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the piano",
+              "relation": "co_occurs_with",
+              "dst": "item::clockwork orange, a",
+              "weight": 5.165104825174895,
+              "confidence": 0.943718868531481,
+              "support_count": 6,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "last_action": "reinforce_edge",
+                "last_updated_step": 8,
+                "write_score": 0.946871886853148
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 4,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 9,
+      "sample_id": "test_00009",
+      "outcome_type": "failure",
+      "target_rank": 15,
+      "episode_id": "episode_000009",
+      "result": {
+        "episode_id": "episode_000009",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 4,
+          "tentative_edges": 2,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::ed wood",
+              "relation": "co_occurs_with",
+              "dst": "item::the crying game",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 15,
+                "target_probability": 0.008346737078211942,
+                "session_item": "Ed Wood"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.8337479894382682,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.991653262921788,
+                "advice_signal": 0.35
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::ed wood",
+              "relation": "co_occurs_with",
+              "dst": "item::the crying game",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 9,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 9,
+                "write_score": 0.8337479894382682,
+                "tentative": true,
+                "created_step": 9
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::forbidden planet",
+              "relation": "co_occurs_with",
+              "dst": "item::the crying game",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 15,
+                "target_probability": 0.008346737078211942,
+                "session_item": "Forbidden Planet"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.8337479894382682,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.991653262921788,
+                "advice_signal": 0.35
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::forbidden planet",
+              "relation": "co_occurs_with",
+              "dst": "item::the crying game",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 9,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 9,
+                "write_score": 0.8337479894382682,
+                "tentative": true,
+                "created_step": 9
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::this is spinal tap",
+              "relation": "co_occurs_with",
+              "dst": "item::highlander",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "This co-occurrence path strongly supported a wrong candidate ranked above the target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "competitor": "Highlander",
+                "contribution": 5.127362760026403
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8969419560848961,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.6,
+                "confidence_signal": 0.6944195608489608,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.991653262921788,
+                "advice_signal": 0.35
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::this is spinal tap",
+              "relation": "co_occurs_with",
+              "dst": "item::highlander",
+              "weight": 2.826083832209832,
+              "confidence": 0.6544195608489608,
+              "support_count": 3,
+              "source_kind": "online_update",
+              "last_update_step": 9,
+              "metadata": {
+                "last_action": "suppress_edge",
+                "last_updated_step": 9,
+                "write_score": 0.8969419560848961
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::highlander",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::imagination, adventure & enchanted realms",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Highlander",
+                "contribution": 0.6374707535281496,
+                "shared_neighbor": "Imagination, Adventure & Enchanted Realms"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8779527944069945,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9920279440699441,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.991653262921788,
+                "advice_signal": 0.175
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::highlander",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::imagination, adventure & enchanted realms",
+              "weight": 0.8420279440699441,
+              "confidence": 0.9520279440699441,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 9,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 218,
+                "write_score": 0.5860663328500624
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::highlander",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::adventure, fantasy & science fiction",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Highlander",
+                "contribution": 0.6374707535281496,
+                "shared_neighbor": "Adventure, Fantasy & Science Fiction"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8779527944069945,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9920279440699441,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.991653262921788,
+                "advice_signal": 0.175
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::highlander",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::adventure, fantasy & science fiction",
+              "weight": 0.8420279440699441,
+              "confidence": 0.9520279440699441,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 9,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 218,
+                "write_score": 0.5860663328500624
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::highlander",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::space operas",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Highlander",
+                "contribution": 0.6374707535281496,
+                "shared_neighbor": "Space Operas"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8779527944069945,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9920279440699441,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.991653262921788,
+                "advice_signal": 0.175
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::highlander",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::space operas",
+              "weight": 0.8420279440699441,
+              "confidence": 0.9520279440699441,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 9,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 9,
+                "write_score": 0.8779527944069945
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 4,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    }
+  ],
+  "weights": {
+    "shared_categories": 0.21249025117604986,
+    "shared_keywords": 0.14727407549968174,
+    "co_occur_score": 1.7228556213818689,
+    "candidate_category_count": -0.20067527736025023,
+    "candidate_keyword_count": -3.3010129366515756e-16,
+    "has_description": 0.004083520819339792,
+    "candidate_in_degree": -0.0879155260244479
+  },
+  "bias": 1.1647366736375566e-16
+}

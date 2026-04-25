@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/home/may1-idsailab/Documents/Hao/cgm/main.py", line 775, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/main.py", line 758, in main
+    summary = build_phase5_test_summary(project_root, args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/main.py", line 511, in build_phase5_test_summary
+    test_result = evaluate_llm_reranker_online(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/engine/test_loop.py", line 215, in evaluate_llm_reranker_online
+    lesson_advice = lesson_agent.infer(
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/llm/lesson_agent.py", line 68, in infer
+    raw_response = self.model.generate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/llm/manager.py", line 67, in generate
+    response = self.model.invoke(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/cgmvenv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 455, in invoke
+    self.generate_prompt(
+  File "/home/may1-idsailab/Documents/Hao/cgm/cgmvenv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1198, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/cgmvenv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1005, in generate
+    self._generate_with_cache(
+  File "/home/may1-idsailab/Documents/Hao/cgm/cgmvenv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1310, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/cgmvenv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1658, in _generate
+    raise e
+  File "/home/may1-idsailab/Documents/Hao/cgm/cgmvenv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1628, in _generate
+    response = raw_response.parse()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/cgmvenv/lib/python3.12/site-packages/openai/_legacy_response.py", line 139, in parse
+    parsed = self._options.post_parser(parsed)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/cgmvenv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 185, in parser
+    return _parse_chat_completion(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/may1-idsailab/Documents/Hao/cgm/cgmvenv/lib/python3.12/site-packages/openai/lib/_parsing/_completions.py", line 98, in parse_chat_completion
+    for choice in chat_completion.choices:
+TypeError: 'NoneType' object is not iterable

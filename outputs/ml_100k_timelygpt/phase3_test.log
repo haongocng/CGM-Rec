@@ -1,0 +1,19 @@
+========================================================================
+CGM-Rec Phase 3 Test Summary
+========================================================================
+Dataset               : ml_100k
+Test samples          : 743
+Metrics               : {'HIT@1': 0.253028263795424, 'NDCG@1': 0.253028263795424, 'HIT@5': 0.5773889636608345, 'NDCG@5': 0.4231159668085455, 'HIT@10': 0.7442799461641992, 'NDCG@10': 0.4768595320466562, 'HIT@20': 1.0, 'NDCG@20': 0.5403569773529235, 'avg_rank': 6.582772543741588}
+Example predictions   :
+  - test_00000: target=Tales from the Crypt Presents: Bordello of Blood top5=['Gandhi', 'Tales from the Crypt Presents: Bordello of Blood', 'First Knight', 'It Could Happen to You', 'Dracula: Dead and Loving It'] p=0.583678
+  - test_00001: target=The Godfather: Part II top5=['The Piano', 'Aliens', 'Heavy Metal', 'Sabrina', 'Multiplicity'] p=0.997169
+  - test_00002: target=The Third Man top5=['The Fugitive', 'The Blues Brothers', 'Aladdin', 'Aliens', 'Jumanji'] p=0.968525
+  - test_00003: target=Air Force One top5=['Scream', 'Air Force One', 'Up Close and Personal', "'Til There Was You", 'Freeway'] p=1.000000
+  - test_00004: target=Toy Story top5=['Toy Story', 'Michael', 'Four Rooms', 'Gattaca', 'Con Air'] p=1.000000
+  - test_00005: target=The Bridge on the River Kwai top5=['The Graduate', 'Desperado', 'Beautiful Girls', 'The Game', 'House Party 3'] p=1.000000
+  - test_00006: target=Apt Pupil top5=['Aliens', 'Unforgiven', 'L.A. Confidential', 'The Innocent', 'Apt Pupil'] p=0.997847
+  - test_00007: target=First Knight top5=['As Good As It Gets', 'First Knight', 'Aliens', 'Michael Collins', 'It Could Happen to You'] p=1.000000
+  - test_00008: target=Clockwork Orange, A top5=['Clockwork Orange, A', 'Deceiver', 'Backbeat', 'Kingpin', 'GoodFellas'] p=0.997789
+  - test_00009: target=The Crying Game top5=['Highlander', 'Three Wishes', 'Jack', 'Beautiful Girls', "She's So Lovely"] p=0.492771
+========================================================================
+Saved summary JSON to /home/may1-idsailab/Documents/Hao/cgm/outputs/ml_100k_timelygpt/phase3_test.json
