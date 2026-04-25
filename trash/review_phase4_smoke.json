@@ -1,0 +1,3679 @@
+{
+  "dataset_name": "ml_100k",
+  "phase": "phase4-test-online",
+  "test_samples": 743,
+  "metrics": {
+    "HIT@1": 0.02288021534320323,
+    "NDCG@1": 0.02288021534320323,
+    "HIT@5": 0.13189771197846567,
+    "NDCG@5": 0.07621358656815243,
+    "HIT@10": 0.28263795423956933,
+    "NDCG@10": 0.12340326703680866,
+    "HIT@20": 1.0,
+    "NDCG@20": 0.29860911183286887,
+    "avg_rank": 13.507402422611037
+  },
+  "edit_counts": {
+    "stored_episodes": 743,
+    "reinforced_edges": 392,
+    "suppressed_edges": 3391,
+    "tentative_edges": 384,
+    "rejected_edits": 95,
+    "promoted_edges": 0
+  },
+  "episodic_summary": {
+    "records": 20,
+    "max_records": 20,
+    "success_records": 3,
+    "failure_records": 17
+  },
+  "semantic_summary": {
+    "edge_count": 25994,
+    "relations": {
+      "belongs_to": 5166,
+      "has_keyword": 7500,
+      "has_description": 1496,
+      "co_occurs_with": 11832
+    }
+  },
+  "examples": [
+    {
+      "sample_id": "test_00000",
+      "target": "Tales from the Crypt Presents: Bordello of Blood",
+      "target_rank": 12,
+      "outcome_type": "failure",
+      "top5": [
+        "American Strays",
+        "Dracula: Dead and Loving It",
+        "Two Much",
+        "Chasers",
+        "The Fear"
+      ],
+      "top_probability": 0.1688013458600286,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 6,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00001",
+      "target": "The Godfather: Part II",
+      "target_rank": 18,
+      "outcome_type": "failure",
+      "top5": [
+        "Bliss",
+        "The Shooter",
+        "Army of Darkness",
+        "The Chamber",
+        "Squeeze"
+      ],
+      "top_probability": 0.213139584089312,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 6,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00002",
+      "target": "The Third Man",
+      "target_rank": 9,
+      "outcome_type": "failure",
+      "top5": [
+        "Two Deaths",
+        "Dingo",
+        "Hear My Song",
+        "Shiloh",
+        "Tin Men"
+      ],
+      "top_probability": 0.2510512250368973,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 4,
+        "tentative_edges": 2,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00003",
+      "target": "Air Force One",
+      "target_rank": 19,
+      "outcome_type": "failure",
+      "top5": [
+        "Freeway",
+        "Picnic",
+        "The Stranger",
+        "Sliver",
+        "Laura"
+      ],
+      "top_probability": 0.21295855918391532,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 6,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00004",
+      "target": "Toy Story",
+      "target_rank": 20,
+      "outcome_type": "failure",
+      "top5": [
+        "Hackers",
+        "Half Baked",
+        "Anaconda",
+        "Pollyanna",
+        "The Fear"
+      ],
+      "top_probability": 0.19601272896765143,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 6,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00005",
+      "target": "The Bridge on the River Kwai",
+      "target_rank": 11,
+      "outcome_type": "failure",
+      "top5": [
+        "House Party 3",
+        "Frisk",
+        "Suture",
+        "Sliver",
+        "The Craft"
+      ],
+      "top_probability": 0.16304745364723777,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 4,
+        "tentative_edges": 2,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00006",
+      "target": "Apt Pupil",
+      "target_rank": 17,
+      "outcome_type": "failure",
+      "top5": [
+        "Fall",
+        "Suture",
+        "The Wonderful, Horrible Life of Leni Riefenstahl",
+        "Crumb",
+        "The Frighteners"
+      ],
+      "top_probability": 0.1462943463814605,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 6,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00007",
+      "target": "First Knight",
+      "target_rank": 15,
+      "outcome_type": "failure",
+      "top5": [
+        "Diabolique",
+        "Fled",
+        "The Jungle Book",
+        "Bliss",
+        "Basquiat"
+      ],
+      "top_probability": 0.32792557839133457,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 6,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00008",
+      "target": "Clockwork Orange, A",
+      "target_rank": 19,
+      "outcome_type": "failure",
+      "top5": [
+        "North",
+        "Roommates",
+        "Jeffrey",
+        "Senseless",
+        "The Leading Man"
+      ],
+      "top_probability": 0.15780415071454193,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 6,
+        "tentative_edges": 0,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    },
+    {
+      "sample_id": "test_00009",
+      "target": "The Crying Game",
+      "target_rank": 10,
+      "outcome_type": "failure",
+      "top5": [
+        "She's So Lovely",
+        "Touch",
+        "Now and Then",
+        "The Funeral",
+        "Judgment Night"
+      ],
+      "top_probability": 0.16670588583728727,
+      "applied_edit_counts": {
+        "stored_episodes": 1,
+        "reinforced_edges": 0,
+        "suppressed_edges": 4,
+        "tentative_edges": 2,
+        "rejected_edits": 0,
+        "promoted_edges": 0
+      }
+    }
+  ],
+  "audit_log_preview": [
+    {
+      "step_index": 0,
+      "sample_id": "test_00000",
+      "outcome_type": "failure",
+      "target_rank": 12,
+      "episode_id": "episode_000000",
+      "result": {
+        "episode_id": "episode_000000",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 6,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::american strays",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "American Strays",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Action, Suspense & Speculative Entertainment"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7799999999999999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.7,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9994543525095714,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::american strays",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight": 0.85,
+              "confidence": 0.96,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 513,
+                "write_score": 0.8189540141285933
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::american strays",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::comedy, crime & sci-fi",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "American Strays",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Comedy, Crime & Sci-Fi"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7799999999999999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.7,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9994543525095714,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::american strays",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::comedy, crime & sci-fi",
+              "weight": 0.85,
+              "confidence": 0.96,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 513,
+                "write_score": 0.8189540141285933
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::american strays",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::crime comedies",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "American Strays",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Crime Comedies"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7799999999999999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.7,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9994543525095714,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::american strays",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::crime comedies",
+              "weight": 0.85,
+              "confidence": 0.96,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 199,
+                "write_score": 0.7555090662805055
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::american strays",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::gangland satires",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "American Strays",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Gangland Satires"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7799999999999999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.7,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9994543525095714,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::american strays",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::gangland satires",
+              "weight": 0.85,
+              "confidence": 0.96,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "taxonomy_level": "Level_4",
+                "last_action": "suppress_edge",
+                "last_updated_step": 199,
+                "write_score": 0.7555090662805055
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::american strays",
+              "relation": "has_keyword",
+              "dst": "kw::action",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "American Strays",
+                "contribution": 0.3515618188642601,
+                "shared_neighbor": "Action"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7699999999999999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.7,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9994543525095714,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::american strays",
+              "relation": "has_keyword",
+              "dst": "kw::action",
+              "weight": 0.85,
+              "confidence": 0.86,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "keyword_rank": 0,
+                "last_action": "suppress_edge",
+                "last_updated_step": 513,
+                "write_score": 0.8153208435954318
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::american strays",
+              "relation": "has_keyword",
+              "dst": "kw::comedy",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "American Strays",
+                "contribution": 0.3515618188642601,
+                "shared_neighbor": "Comedy"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7699999999999999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.7,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9994543525095714,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::american strays",
+              "relation": "has_keyword",
+              "dst": "kw::comedy",
+              "weight": 0.75,
+              "confidence": 0.86,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 0,
+              "metadata": {
+                "keyword_rank": 1,
+                "last_action": "suppress_edge",
+                "last_updated_step": 513,
+                "write_score": 0.8153208435954318
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 0,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 0,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 1,
+      "sample_id": "test_00001",
+      "outcome_type": "failure",
+      "target_rank": 18,
+      "episode_id": "episode_000001",
+      "result": {
+        "episode_id": "episode_000001",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 6,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::bliss",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::mystery, crime & futuristic realms",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Bliss",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Mystery, Crime & Futuristic Realms"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.87,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999769,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::bliss",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::mystery, crime & futuristic realms",
+              "weight": 0.85,
+              "confidence": 0.96,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 124,
+                "write_score": 0.7049690566474957
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::bliss",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::sci-fi, mystery & romance thrillers",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Bliss",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Sci-Fi, Mystery & Romance Thrillers"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.87,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999769,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::bliss",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::sci-fi, mystery & romance thrillers",
+              "weight": 0.85,
+              "confidence": 0.96,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 124,
+                "write_score": 0.7049690566474957
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::bliss",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::techno thrillers",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Bliss",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Techno Thrillers"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.87,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 1.0,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999769,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::bliss",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::techno thrillers",
+              "weight": 0.85,
+              "confidence": 0.96,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 124,
+                "write_score": 0.7049690566474957
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::bliss",
+              "relation": "has_keyword",
+              "dst": "kw::mystery",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Bliss",
+                "contribution": 0.26367136414819503,
+                "shared_neighbor": "Mystery"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.86,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999769,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::bliss",
+              "relation": "has_keyword",
+              "dst": "kw::mystery",
+              "weight": 0.65,
+              "confidence": 0.86,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "keyword_rank": 2,
+                "last_action": "suppress_edge",
+                "last_updated_step": 124,
+                "write_score": 0.6961181132467149
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::bliss",
+              "relation": "has_keyword",
+              "dst": "kw::romance",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Bliss",
+                "contribution": 0.26367136414819503,
+                "shared_neighbor": "Romance"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.86,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999769,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::bliss",
+              "relation": "has_keyword",
+              "dst": "kw::romance",
+              "weight": 0.75,
+              "confidence": 0.86,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "keyword_rank": 1,
+                "last_action": "suppress_edge",
+                "last_updated_step": 124,
+                "write_score": 0.6961181132467149
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::bliss",
+              "relation": "has_keyword",
+              "dst": "kw::sci-fi",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Bliss",
+                "contribution": 0.26367136414819503,
+                "shared_neighbor": "Sci-Fi"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.86,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999769,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::bliss",
+              "relation": "has_keyword",
+              "dst": "kw::sci-fi",
+              "weight": 0.85,
+              "confidence": 0.86,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 1,
+              "metadata": {
+                "keyword_rank": 0,
+                "last_action": "suppress_edge",
+                "last_updated_step": 124,
+                "write_score": 0.6961181132467149
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 0,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25968,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 2,
+      "sample_id": "test_00002",
+      "outcome_type": "failure",
+      "target_rank": 9,
+      "episode_id": "episode_000002",
+      "result": {
+        "episode_id": "episode_000002",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 4,
+          "tentative_edges": 2,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::the princess bride",
+              "relation": "co_occurs_with",
+              "dst": "item::the third man",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 9,
+                "target_probability": 0.06723110412883715,
+                "session_item": "The Princess Bride"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.6399153343806744,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.4,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9327688958711629,
+                "advice_signal": 0.0
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::the princess bride",
+              "relation": "co_occurs_with",
+              "dst": "item::the third man",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 2,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 2,
+                "write_score": 0.6399153343806744,
+                "tentative": true,
+                "created_step": 2
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::being there",
+              "relation": "co_occurs_with",
+              "dst": "item::the third man",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 9,
+                "target_probability": 0.06723110412883715,
+                "session_item": "Being There"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.6399153343806744,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.4,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9327688958711629,
+                "advice_signal": 0.0
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::being there",
+              "relation": "co_occurs_with",
+              "dst": "item::the third man",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 2,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 2,
+                "write_score": 0.6399153343806744,
+                "tentative": true,
+                "created_step": 2
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::two deaths",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Two Deaths",
+                "contribution": 1.4728165969485365,
+                "shared_neighbor": "Action, Suspense & Speculative Entertainment"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.6899000000000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.4,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9327688958711629,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::two deaths",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight": 0.849,
+              "confidence": 0.959,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 2,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 720,
+                "write_score": 0.6672044082250139
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::two deaths",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Two Deaths",
+                "contribution": 1.4728165969485365,
+                "shared_neighbor": "Crime, Thriller & Action"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.6899000000000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.4,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9327688958711629,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::two deaths",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight": 0.849,
+              "confidence": 0.959,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 2,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 720,
+                "write_score": 0.6672044082250139
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::two deaths",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::erotic thrillers",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Two Deaths",
+                "contribution": 1.4728165969485365,
+                "shared_neighbor": "Erotic Thrillers"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.6899000000000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.4,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9327688958711629,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::two deaths",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::erotic thrillers",
+              "weight": 0.849,
+              "confidence": 0.959,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 2,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 730,
+                "write_score": 0.7856919408261436
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::two deaths",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::toxic obsessions",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Two Deaths",
+                "contribution": 1.4728165969485365,
+                "shared_neighbor": "Toxic Obsessions"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.6899000000000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.4,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9327688958711629,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::two deaths",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::toxic obsessions",
+              "weight": 0.849,
+              "confidence": 0.959,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 2,
+              "metadata": {
+                "taxonomy_level": "Level_4",
+                "last_action": "suppress_edge",
+                "last_updated_step": 730,
+                "write_score": 0.7856919408261436
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 0,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 3,
+      "sample_id": "test_00003",
+      "outcome_type": "failure",
+      "target_rank": 19,
+      "episode_id": "episode_000003",
+      "result": {
+        "episode_id": "episode_000003",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 6,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::freeway",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Freeway",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Action, Suspense & Speculative Entertainment"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8698001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.998001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::freeway",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight": 0.848001,
+              "confidence": 0.958001,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 547,
+                "write_score": 0.7559907917593526
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::freeway",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Freeway",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Crime, Thriller & Action"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8698001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.998001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::freeway",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight": 0.848001,
+              "confidence": 0.958001,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 547,
+                "write_score": 0.7559907917593526
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::freeway",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::crime thrillers",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Freeway",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Crime Thrillers"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8698001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.998001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::freeway",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::crime thrillers",
+              "weight": 0.848001,
+              "confidence": 0.958001,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 550,
+                "write_score": 0.785942867340459
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::freeway",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::betrayals & deceptions",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Freeway",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Betrayals & Deceptions"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8698001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.998001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::freeway",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::betrayals & deceptions",
+              "weight": 0.848001,
+              "confidence": 0.958001,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "taxonomy_level": "Level_4",
+                "last_action": "suppress_edge",
+                "last_updated_step": 595,
+                "write_score": 0.7855083215765027
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::freeway",
+              "relation": "has_keyword",
+              "dst": "kw::crime",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Freeway",
+                "contribution": 0.26367136414819503,
+                "shared_neighbor": "Crime"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.85982009,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.8982009,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::freeway",
+              "relation": "has_keyword",
+              "dst": "kw::crime",
+              "weight": 0.7482009,
+              "confidence": 0.8582008999999999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "keyword_rank": 1,
+                "last_action": "suppress_edge",
+                "last_updated_step": 550,
+                "write_score": 0.7855976684166289
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::freeway",
+              "relation": "has_keyword",
+              "dst": "kw::drama",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Freeway",
+                "contribution": 0.26367136414819503,
+                "shared_neighbor": "Drama"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.85982009,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.8982009,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 1.0,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::freeway",
+              "relation": "has_keyword",
+              "dst": "kw::drama",
+              "weight": 0.6484008,
+              "confidence": 0.8582008999999999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 3,
+              "metadata": {
+                "keyword_rank": 2,
+                "last_action": "suppress_edge",
+                "last_updated_step": 550,
+                "write_score": 0.788315029827314
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 2,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25968,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 4,
+      "sample_id": "test_00004",
+      "outcome_type": "failure",
+      "target_rank": 20,
+      "episode_id": "episode_000004",
+      "result": {
+        "episode_id": "episode_000004",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 6,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::hackers",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Hackers",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Action, Suspense & Speculative Entertainment"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8697002999000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.997002999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999939,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::hackers",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight": 0.847002999,
+              "confidence": 0.957002999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 533,
+                "write_score": 0.8510034562166165
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::hackers",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::sci-fi, action & comedy",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Hackers",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Sci-Fi, Action & Comedy"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8697002999000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.997002999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999939,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::hackers",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::sci-fi, action & comedy",
+              "weight": 0.847002999,
+              "confidence": 0.957002999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 533,
+                "write_score": 0.8510034562166165
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::hackers",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::cyberpunk films",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Hackers",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Cyberpunk Films"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8697002999000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.997002999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999939,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::hackers",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::cyberpunk films",
+              "weight": 0.847002999,
+              "confidence": 0.957002999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 533,
+                "write_score": 0.8510034562166165
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::hackers",
+              "relation": "has_keyword",
+              "dst": "kw::crime",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Hackers",
+                "contribution": 0.17578090943213004,
+                "shared_neighbor": "Crime"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7855111793421301,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 0.7031236377285202,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.8973026990999999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999939,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::hackers",
+              "relation": "has_keyword",
+              "dst": "kw::crime",
+              "weight": 0.7473026990999999,
+              "confidence": 0.8573026990999999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "keyword_rank": 1,
+                "last_action": "suppress_edge",
+                "last_updated_step": 533,
+                "write_score": 0.8205489308515055
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::hackers",
+              "relation": "has_keyword",
+              "dst": "kw::thriller",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Hackers",
+                "contribution": 0.17578090943213004,
+                "shared_neighbor": "Thriller"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7855111793421301,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 0.7031236377285202,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.8973026990999999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999939,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::hackers",
+              "relation": "has_keyword",
+              "dst": "kw::thriller",
+              "weight": 0.847002999,
+              "confidence": 0.8573026990999999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "keyword_rank": 0,
+                "last_action": "suppress_edge",
+                "last_updated_step": 4,
+                "write_score": 0.7855111793421301
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::half baked",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::humor, storytelling & social reflection",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Half Baked",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Humor, Storytelling & Social Reflection"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8697002999000001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.997002999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999999939,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::half baked",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::humor, storytelling & social reflection",
+              "weight": 0.847002999,
+              "confidence": 0.957002999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 4,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 4,
+                "write_score": 0.8697002999000001
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 2,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25968,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 5,
+      "sample_id": "test_00005",
+      "outcome_type": "failure",
+      "target_rank": 11,
+      "episode_id": "episode_000005",
+      "result": {
+        "episode_id": "episode_000005",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 4,
+          "tentative_edges": 2,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::little women",
+              "relation": "co_occurs_with",
+              "dst": "item::the bridge on the river kwai",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 11,
+                "target_probability": 0.05589707041396508,
+                "session_item": "Little Women"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.6916154394379053,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.6,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9441029295860349,
+                "advice_signal": 0.0
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::little women",
+              "relation": "co_occurs_with",
+              "dst": "item::the bridge on the river kwai",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 5,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 5,
+                "write_score": 0.6916154394379053,
+                "tentative": true,
+                "created_step": 5
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::room with a view, a",
+              "relation": "co_occurs_with",
+              "dst": "item::the bridge on the river kwai",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 11,
+                "target_probability": 0.05589707041396508,
+                "session_item": "Room with a View, A"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.6916154394379053,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.6,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9441029295860349,
+                "advice_signal": 0.0
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::room with a view, a",
+              "relation": "co_occurs_with",
+              "dst": "item::the bridge on the river kwai",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 5,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 5,
+                "write_score": 0.6916154394379053,
+                "tentative": true,
+                "created_step": 5
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::house party 3",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::love, comedy & human connection",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "House Party 3",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Love, Comedy & Human Connection"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7496005996001001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.6,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.996005996001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9441029295860349,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::house party 3",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::love, comedy & human connection",
+              "weight": 0.846005996001,
+              "confidence": 0.956005996001,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 5,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 523,
+                "write_score": 0.8212719393804384
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::house party 3",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::comedy, romance & drama",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "House Party 3",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Comedy, Romance & Drama"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7496005996001001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.6,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.996005996001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9441029295860349,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::house party 3",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::comedy, romance & drama",
+              "weight": 0.846005996001,
+              "confidence": 0.956005996001,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 5,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 523,
+                "write_score": 0.8212719393804384
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::house party 3",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::romantic comedies",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "House Party 3",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Romantic Comedies"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7496005996001001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.6,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.996005996001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9441029295860349,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::house party 3",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::romantic comedies",
+              "weight": 0.846005996001,
+              "confidence": 0.956005996001,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 5,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 523,
+                "write_score": 0.8212719393804384
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::house party 3",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::social climbers",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "House Party 3",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Social Climbers"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7496005996001001,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.6,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.996005996001,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9441029295860349,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::house party 3",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::social climbers",
+              "weight": 0.846005996001,
+              "confidence": 0.956005996001,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 5,
+              "metadata": {
+                "taxonomy_level": "Level_4",
+                "last_action": "suppress_edge",
+                "last_updated_step": 523,
+                "write_score": 0.8212719393804384
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 2,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 6,
+      "sample_id": "test_00006",
+      "outcome_type": "failure",
+      "target_rank": 17,
+      "episode_id": "episode_000006",
+      "result": {
+        "episode_id": "episode_000006",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 6,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::fall",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Fall",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Action, Suspense & Speculative Entertainment"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8695009990004999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.995009990004999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999994927015,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::fall",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight": 0.845009990004999,
+              "confidence": 0.955009990004999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 664,
+                "write_score": 0.787497424602411
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::fall",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Fall",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Crime, Thriller & Action"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8695009990004999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.995009990004999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999994927015,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::fall",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight": 0.845009990004999,
+              "confidence": 0.955009990004999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 664,
+                "write_score": 0.787497424602411
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::fall",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::crime thrillers",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Fall",
+                "contribution": 0.7364082984742683,
+                "shared_neighbor": "Crime Thrillers"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8695009990004999,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.995009990004999,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999994927015,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::fall",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::crime thrillers",
+              "weight": 0.845009990004999,
+              "confidence": 0.955009990004999,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 665,
+                "write_score": 0.5760869532965037
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::fall",
+              "relation": "has_keyword",
+              "dst": "kw::adventure",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Fall",
+                "contribution": 0.3515618188642601,
+                "shared_neighbor": "Adventure"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8595508991004499,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.895508991004499,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999994927015,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::fall",
+              "relation": "has_keyword",
+              "dst": "kw::adventure",
+              "weight": 0.6460079920039992,
+              "confidence": 0.855508991004499,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "keyword_rank": 2,
+                "last_action": "suppress_edge",
+                "last_updated_step": 664,
+                "write_score": 0.7859269569474119
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::fall",
+              "relation": "has_keyword",
+              "dst": "kw::friendship",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Fall",
+                "contribution": 0.3515618188642601,
+                "shared_neighbor": "Friendship"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8595508991004499,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.895508991004499,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999994927015,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::fall",
+              "relation": "has_keyword",
+              "dst": "kw::friendship",
+              "weight": 0.5465069930034993,
+              "confidence": 0.855508991004499,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "keyword_rank": 3,
+                "last_action": "suppress_edge",
+                "last_updated_step": 667,
+                "write_score": 0.786314018109174
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::fall",
+              "relation": "has_keyword",
+              "dst": "kw::survival",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Fall",
+                "contribution": 0.3515618188642601,
+                "shared_neighbor": "Survival"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8595508991004499,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.895508991004499,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999994927015,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::fall",
+              "relation": "has_keyword",
+              "dst": "kw::survival",
+              "weight": 0.745508991004499,
+              "confidence": 0.855508991004499,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 6,
+              "metadata": {
+                "keyword_rank": 1,
+                "last_action": "suppress_edge",
+                "last_updated_step": 690,
+                "write_score": 0.8073827081518573
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 4,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25968,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 7,
+      "sample_id": "test_00007",
+      "outcome_type": "failure",
+      "target_rank": 15,
+      "episode_id": "episode_000007",
+      "result": {
+        "episode_id": "episode_000007",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 6,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::diabolique",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Diabolique",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Action, Suspense & Speculative Entertainment"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8694014980014995,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.994014980014994,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999980159865,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::diabolique",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::action, suspense & speculative entertainment",
+              "weight": 0.844014980014994,
+              "confidence": 0.954014980014994,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 563,
+                "write_score": 0.8062176421076025
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::diabolique",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Diabolique",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Crime, Thriller & Action"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8694014980014995,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.994014980014994,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999980159865,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::diabolique",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::crime, thriller & action",
+              "weight": 0.844014980014994,
+              "confidence": 0.954014980014994,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 563,
+                "write_score": 0.8062176421076025
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::diabolique",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::psychological thrillers",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Diabolique",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Psychological Thrillers"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8694014980014995,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.994014980014994,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999980159865,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::diabolique",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::psychological thrillers",
+              "weight": 0.844014980014994,
+              "confidence": 0.954014980014994,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 563,
+                "write_score": 0.8062176421076025
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::diabolique",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::murder investigations",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "Diabolique",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Murder Investigations"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8694014980014995,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.994014980014994,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999980159865,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::diabolique",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::murder investigations",
+              "weight": 0.844014980014994,
+              "confidence": 0.954014980014994,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "taxonomy_level": "Level_4",
+                "last_action": "suppress_edge",
+                "last_updated_step": 563,
+                "write_score": 0.8062176421076025
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::diabolique",
+              "relation": "has_keyword",
+              "dst": "kw::crime",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Diabolique",
+                "contribution": 0.26367136414819503,
+                "shared_neighbor": "Crime"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8594613482013495,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.8946134820134944,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999980159865,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::diabolique",
+              "relation": "has_keyword",
+              "dst": "kw::crime",
+              "weight": 0.5458104860104958,
+              "confidence": 0.8546134820134944,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "keyword_rank": 3,
+                "last_action": "suppress_edge",
+                "last_updated_step": 563,
+                "write_score": 0.8063507529576753
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::diabolique",
+              "relation": "has_keyword",
+              "dst": "kw::mystery",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "Diabolique",
+                "contribution": 0.26367136414819503,
+                "shared_neighbor": "Mystery"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8594613482013495,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.8946134820134944,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999980159865,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::diabolique",
+              "relation": "has_keyword",
+              "dst": "kw::mystery",
+              "weight": 0.7446134820134944,
+              "confidence": 0.8546134820134944,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 7,
+              "metadata": {
+                "keyword_rank": 1,
+                "last_action": "suppress_edge",
+                "last_updated_step": 563,
+                "write_score": 0.8155948369076829
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 4,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25968,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 8,
+      "sample_id": "test_00008",
+      "outcome_type": "failure",
+      "target_rank": 19,
+      "episode_id": "episode_000008",
+      "result": {
+        "episode_id": "episode_000008",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 6,
+          "tentative_edges": 0,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::north",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::imagination, adventure & enchanted realms",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "North",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Imagination, Adventure & Enchanted Realms"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8693020965034979,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.993020965034979,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999828446,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::north",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::imagination, adventure & enchanted realms",
+              "weight": 0.843020965034979,
+              "confidence": 0.953020965034979,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 696,
+                "write_score": 0.7852023755171752
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::north",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::family comedy & adventure",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "North",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Family Comedy & Adventure"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8693020965034979,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.993020965034979,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999828446,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::north",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::family comedy & adventure",
+              "weight": 0.843020965034979,
+              "confidence": 0.953020965034979,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 696,
+                "write_score": 0.7852023755171752
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::north",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::family comedies",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "North",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Family Comedies"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8693020965034979,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.993020965034979,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999828446,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::north",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::family comedies",
+              "weight": 0.843020965034979,
+              "confidence": 0.953020965034979,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 696,
+                "write_score": 0.7852023755171752
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::north",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::teenage escapades",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "North",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Teenage Escapades"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8693020965034979,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.993020965034979,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999828446,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::north",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::teenage escapades",
+              "weight": 0.843020965034979,
+              "confidence": 0.953020965034979,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "taxonomy_level": "Level_4",
+                "last_action": "suppress_edge",
+                "last_updated_step": 630,
+                "write_score": 0.8022517024666928
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::north",
+              "relation": "has_keyword",
+              "dst": "kw::adventure",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "North",
+                "contribution": 0.3515618188642601,
+                "shared_neighbor": "Adventure"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8593718868531481,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.893718868531481,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999828446,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::north",
+              "relation": "has_keyword",
+              "dst": "kw::adventure",
+              "weight": 0.743718868531481,
+              "confidence": 0.8537188685314809,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "keyword_rank": 1,
+                "last_action": "suppress_edge",
+                "last_updated_step": 696,
+                "write_score": 0.7879111952504525
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::north",
+              "relation": "has_keyword",
+              "dst": "kw::comedy",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_keywords",
+                "competitor": "North",
+                "contribution": 0.3515618188642601,
+                "shared_neighbor": "Comedy"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.8593718868531481,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 1.0,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.893718868531481,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9999999999828446,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::north",
+              "relation": "has_keyword",
+              "dst": "kw::comedy",
+              "weight": 0.843020965034979,
+              "confidence": 0.8537188685314809,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 8,
+              "metadata": {
+                "keyword_rank": 0,
+                "last_action": "suppress_edge",
+                "last_updated_step": 630,
+                "write_score": 0.7996208065108915
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 4,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25968,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    },
+    {
+      "step_index": 9,
+      "sample_id": "test_00009",
+      "outcome_type": "failure",
+      "target_rank": 10,
+      "episode_id": "episode_000009",
+      "result": {
+        "episode_id": "episode_000009",
+        "counts": {
+          "stored_episodes": 1,
+          "reinforced_edges": 0,
+          "suppressed_edges": 4,
+          "tentative_edges": 2,
+          "rejected_edits": 0,
+          "promoted_edges": 0
+        },
+        "applied_edits": [
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::ed wood",
+              "relation": "co_occurs_with",
+              "dst": "item::the crying game",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 10,
+                "target_probability": 0.052342639642689516,
+                "session_item": "Ed Wood"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.6671486040535966,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.5,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9476573603573105,
+                "advice_signal": 0.0
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::ed wood",
+              "relation": "co_occurs_with",
+              "dst": "item::the crying game",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 9,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 9,
+                "write_score": 0.6671486040535966,
+                "tentative": true,
+                "created_step": 9
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "add_tentative_edge",
+              "src": "item::forbidden planet",
+              "relation": "co_occurs_with",
+              "dst": "item::the crying game",
+              "weight_delta": 0.1,
+              "confidence_delta": 0.02,
+              "support_delta": 1,
+              "reason": "Failure lesson suggests a missing short-term bridge from the current session to the true target.",
+              "evidence": {
+                "feature": "co_occur_score",
+                "target_rank": 10,
+                "target_probability": 0.052342639642689516,
+                "session_item": "Forbidden Planet"
+              }
+            },
+            "write_score": {
+              "action": "add_tentative_edge",
+              "value": 0.6671486040535966,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.5,
+                "contribution_signal": 0.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.0,
+                "confidence_signal": 0.0,
+                "novelty_signal": 1.0,
+                "uncertainty_signal": 0.9476573603573105,
+                "advice_signal": 0.0
+              },
+              "rationale": "Tentative edges require enough novelty and evidence pressure. Failure gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::forbidden planet",
+              "relation": "co_occurs_with",
+              "dst": "item::the crying game",
+              "weight": 0.1,
+              "confidence": 0.02,
+              "support_count": 1,
+              "source_kind": "online_tentative",
+              "last_update_step": 9,
+              "metadata": {
+                "last_action": "add_tentative_edge",
+                "last_updated_step": 9,
+                "write_score": 0.6671486040535966,
+                "tentative": true,
+                "created_step": 9
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::she's so lovely",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::drama, romance & human experience",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "She's So Lovely",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Drama, Romance & Human Experience"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7192027944069945,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.5,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9920279440699441,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9476573603573105,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::she's so lovely",
+              "relation": "belongs_to",
+              "dst": "cat::level_1::drama, romance & human experience",
+              "weight": 0.8420279440699441,
+              "confidence": 0.9520279440699441,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 9,
+              "metadata": {
+                "taxonomy_level": "Level_1",
+                "last_action": "suppress_edge",
+                "last_updated_step": 736,
+                "write_score": 0.7921277872854606
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::she's so lovely",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::drama, crime & romance",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "She's So Lovely",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Drama, Crime & Romance"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7192027944069945,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.5,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9920279440699441,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9476573603573105,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::she's so lovely",
+              "relation": "belongs_to",
+              "dst": "cat::level_2::drama, crime & romance",
+              "weight": 0.8420279440699441,
+              "confidence": 0.9520279440699441,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 9,
+              "metadata": {
+                "taxonomy_level": "Level_2",
+                "last_action": "suppress_edge",
+                "last_updated_step": 736,
+                "write_score": 0.7953535960756362
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::she's so lovely",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::redemption dramas",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "She's So Lovely",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Redemption Dramas"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7192027944069945,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.5,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9920279440699441,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9476573603573105,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::she's so lovely",
+              "relation": "belongs_to",
+              "dst": "cat::level_3::redemption dramas",
+              "weight": 0.8420279440699441,
+              "confidence": 0.9520279440699441,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 9,
+              "metadata": {
+                "taxonomy_level": "Level_3",
+                "last_action": "suppress_edge",
+                "last_updated_step": 736,
+                "write_score": 0.7953535960756362
+              }
+            }
+          },
+          {
+            "proposal": {
+              "action": "suppress_edge",
+              "src": "item::she's so lovely",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::haunted past redeemers",
+              "weight_delta": -0.15,
+              "confidence_delta": -0.04,
+              "support_delta": 0,
+              "reason": "Shared semantic evidence over-supported an incorrect candidate.",
+              "evidence": {
+                "feature": "shared_categories",
+                "competitor": "She's So Lovely",
+                "contribution": 0.9818777312990243,
+                "shared_neighbor": "Haunted Past Redeemers"
+              }
+            },
+            "write_score": {
+              "action": "suppress_edge",
+              "value": 0.7192027944069945,
+              "accepted": true,
+              "target_memory": "semantic",
+              "components": {
+                "rank_signal": 0.5,
+                "contribution_signal": 1.0,
+                "outcome_signal": 1.0,
+                "support_signal": 0.2,
+                "confidence_signal": 0.9920279440699441,
+                "novelty_signal": 0.0,
+                "uncertainty_signal": 0.9476573603573105,
+                "advice_signal": 0.0
+              },
+              "rationale": "Suppress when a confident existing path contributed to a misleading ranking. Failure outcome gives a bonus but is not strictly required."
+            },
+            "applied": true,
+            "resulting_edge": {
+              "src": "item::she's so lovely",
+              "relation": "belongs_to",
+              "dst": "cat::level_4::haunted past redeemers",
+              "weight": 0.8420279440699441,
+              "confidence": 0.9520279440699441,
+              "support_count": 1,
+              "source_kind": "online_update",
+              "last_update_step": 9,
+              "metadata": {
+                "taxonomy_level": "Level_4",
+                "last_action": "suppress_edge",
+                "last_updated_step": 736,
+                "write_score": 0.7953535960756362
+              }
+            }
+          }
+        ],
+        "rejected_edits": [],
+        "maintenance": {
+          "decayed_tentative_edges": 4,
+          "pruned_tentative_edges": 0,
+          "decayed_stable_edges": 25970,
+          "pruned_stable_edges": 0,
+          "promoted_edges": 0
+        }
+      }
+    }
+  ],
+  "weights": {
+    "shared_categories": 0.24546943282475608,
+    "shared_keywords": 0.08789045471606502,
+    "co_occur_score": 0.647796854006504,
+    "candidate_category_count": 0.0007611279263471651,
+    "candidate_keyword_count": -1.6045458939890499e-16,
+    "has_description": 0.0025000005168893166,
+    "candidate_in_degree": -0.9289580862711719
+  },
+  "bias": 1.163688869221481e-16
+}

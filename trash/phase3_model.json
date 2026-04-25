@@ -1,0 +1,21 @@
+{
+  "feature_names": [
+    "shared_categories",
+    "shared_keywords",
+    "co_occur_score",
+    "candidate_category_count",
+    "candidate_keyword_count",
+    "has_description",
+    "candidate_in_degree"
+  ],
+  "weights": {
+    "shared_categories": 0.19560475494188317,
+    "shared_keywords": 0.25108735903337254,
+    "co_occur_score": 0.6556167050012618,
+    "candidate_category_count": -0.0928472449120351,
+    "candidate_keyword_count": -3.625572064791527e-16,
+    "has_description": 0.001046948375196375,
+    "candidate_in_degree": 0.4128146517259981
+  },
+  "bias": -3.230922474006803e-17
+}

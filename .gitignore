@@ -1,6 +1,6 @@
 .env
 __pycache__
 dataset
-trash
+# trash
 docs
 cgmvenv

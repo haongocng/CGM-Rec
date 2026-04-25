@@ -1,0 +1,79 @@
+{
+  "dataset_name": "ml_100k",
+  "seed_graph": {
+    "node_count": 4302,
+    "edge_count": 25974,
+    "nodes_by_type": {
+      "item": 1500,
+      "category": 285,
+      "keyword": 1021,
+      "description": 1496
+    },
+    "edges_by_relation": {
+      "belongs_to": 5166,
+      "has_keyword": 7500,
+      "has_description": 1496,
+      "co_occurs_with": 11812
+    },
+    "semantic_memory_edges": 25974,
+    "semantic_memory_relations": {
+      "belongs_to": 5166,
+      "has_keyword": 7500,
+      "has_description": 1496,
+      "co_occurs_with": 11812
+    }
+  },
+  "warmup": {
+    "samples": 40,
+    "stream_samples": 160,
+    "mode": "ratio",
+    "co_occur_window_size": 5,
+    "keyword_top_k": 5,
+    "include_description": true
+  },
+  "test_overlap": {
+    "test_only_items_count": 187,
+    "test_only_items_preview": [
+      "8 Heads in a Duffel Bag",
+      "Across the Sea of Time",
+      "Albino Alligator",
+      "All Over Me",
+      "American Buffalo",
+      "Anna",
+      "Ayn Rand: A Sense of Life",
+      "B. Monkey",
+      "Babyfever",
+      "Bad Moon"
+    ]
+  },
+  "inspection": {
+    "title": "Ayn Rand: A Sense of Life",
+    "present_in_seed_graph": true,
+    "metadata_exists": true,
+    "taxonomy_levels": {
+      "Level_1": "Drama, Romance & Human Experience",
+      "Level_2": "Biographical Dramas & Music Biopics",
+      "Level_3": "Biographical Dramas",
+      "Level_4": "Artistic Visionaries"
+    },
+    "keywords": [
+      "Biography",
+      "Documentary",
+      "Philosophy",
+      "Individualism",
+      "Freedom"
+    ],
+    "outgoing_edges": [
+      "belongs_to -> Drama, Romance & Human Experience (weight=1.00, conf=1.00, support=1, source=metadata)",
+      "belongs_to -> Biographical Dramas & Music Biopics (weight=1.00, conf=1.00, support=1, source=metadata)",
+      "belongs_to -> Biographical Dramas (weight=1.00, conf=1.00, support=1, source=metadata)",
+      "belongs_to -> Artistic Visionaries (weight=1.00, conf=1.00, support=1, source=metadata)",
+      "has_keyword -> Biography (weight=1.00, conf=0.90, support=1, source=metadata)",
+      "has_keyword -> Documentary (weight=0.90, conf=0.90, support=1, source=metadata)",
+      "has_keyword -> Philosophy (weight=0.80, conf=0.90, support=1, source=metadata)",
+      "has_keyword -> Individualism (weight=0.70, conf=0.90, support=1, source=metadata)",
+      "has_keyword -> Freedom (weight=0.60, conf=0.90, support=1, source=metadata)",
+      "has_description -> Ayn Rand: A Sense of Life (weight=1.00, conf=0.95, support=1, source=metadata)"
+    ]
+  }
+}

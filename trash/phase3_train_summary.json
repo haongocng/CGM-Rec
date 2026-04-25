@@ -1,0 +1,30 @@
+{
+  "dataset_name": "ml_100k",
+  "phase": "phase3-train",
+  "warmup_samples": 40,
+  "train_stream_samples": 160,
+  "epochs": 2,
+  "learning_rate": 0.02,
+  "average_loss": 3.7496996780651095,
+  "metrics": {
+    "HIT@1": 0.275,
+    "NDCG@1": 0.275,
+    "HIT@5": 0.584375,
+    "NDCG@5": 0.4348064157118291,
+    "HIT@10": 0.765625,
+    "NDCG@10": 0.4921719065796076,
+    "HIT@20": 1.0,
+    "NDCG@20": 0.5514692292178102,
+    "avg_rank": 6.196875
+  },
+  "weights": {
+    "shared_categories": 0.19560475494188317,
+    "shared_keywords": 0.25108735903337254,
+    "co_occur_score": 0.6556167050012618,
+    "candidate_category_count": -0.0928472449120351,
+    "candidate_keyword_count": -3.625572064791527e-16,
+    "has_description": 0.001046948375196375,
+    "candidate_in_degree": 0.4128146517259981
+  },
+  "bias": -3.230922474006803e-17
+}
