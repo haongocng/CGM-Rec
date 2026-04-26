@@ -22,7 +22,7 @@ def ndcg_at_k(rank: int, k: int) -> float:
     return 1.0 / math.log2(rank + 1)
 
 
-def evaluate_predictions(predictions: list[list[str]], targets: list[str], ks: tuple[int, ...] = (1, 5, 10, 20)) -> dict[str, float]:
+def evaluate_predictions(predictions: list[list[str]], targets: list[str], ks: tuple[int, ...] = (1, 5, 10, 15, 20)) -> dict[str, float]:
     ranks = [get_rank(prediction, target) for prediction, target in zip(predictions, targets)]
     metrics: dict[str, float] = {}
     if not ranks:

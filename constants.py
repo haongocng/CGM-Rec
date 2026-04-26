@@ -1,12 +1,15 @@
 """Shared constants for Phase 1-2 of CGM-Rec."""
 
+# Dataset identifiers — must match the folder name under cgm/dataset/
 DATASET_ML_100K = "ml_100k"
+DATASET_BUNDLE = "bundle"
+DATASET_ML_1M = "ml_1m"
+DATASET_GAMES = "games"
 
-SUPPORTED_DATASETS = (DATASET_ML_100K,)
+SUPPORTED_DATASETS = (DATASET_ML_100K, DATASET_BUNDLE, DATASET_ML_1M, DATASET_GAMES)
 
-TRAIN_FILENAME = "train_ml100k.json"
-TEST_FILENAME = "test_ml100k.json"
-INFO_FILENAME = "info_ML100k.json"
+# File naming convention: {split}_{dataset_name}.json  (uniform across all datasets)
+# e.g. train_ml100k.json, test_bundle.json, info_ml_1m.json
 
 SESSION_PREFIX = "Current session interactions:"
 CANDIDATE_MARKER = "\nCandidate Set:"

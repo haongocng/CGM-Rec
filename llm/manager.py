@@ -18,7 +18,7 @@ class MockJsonModel:
             outcome = "success" if target_rank <= 5 else "failure"
             return json.dumps(
                 {
-                    "pattern": f"mock_{outcome}_pattern",
+                    "pattern": f"mock_{{outcome}}_pattern",
                     "signal": "Use graph/scorer disagreement and target rank as the observable signal.",
                     "failure_cause": "The mock lesson agent does not infer semantic causes.",
                     "rule": "Keep graph edits gated by diagnostics; use this advice only as weak confidence.",

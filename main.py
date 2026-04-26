@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from config import default_config
+from config import Phase1Config
 from data.loader import DatasetLoader
 from data.splitter import split_warmup
 from engine.diagnostics import HybridDiagnostics
@@ -155,22 +155,27 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def load_bundle_and_config(project_root: Path, args: argparse.Namespace):
-    config = default_config(project_root)
-    config.dataset_name = args.dataset
-    config.warmup_mode = args.warmup_mode
-    config.warmup_ratio = args.warmup_ratio
-    config.warmup_count = args.warmup_count
-    config.random_seed = args.seed
-    config.keyword_top_k = args.keyword_top_k
-    config.include_description = not args.no_description
-    config.co_occur_window_size = args.co_occur_window_size
-    config.phase3_epochs = args.epochs
-    config.phase3_learning_rate = args.learning_rate
+    # Build Phase1Config with the correct dataset_name upfront so that
+    # __post_init__ resolves train/test/info paths for the right dataset.
+    config = Phase1Config(
+        dataset_root=project_root / "dataset",
+        dataset_name=args.dataset,
+        warmup_mode=args.warmup_mode,
+        warmup_ratio=args.warmup_ratio,
+        warmup_count=args.warmup_count,
+        random_seed=args.seed,
+        keyword_top_k=args.keyword_top_k,
+        include_description=not args.no_description,
+        co_occur_window_size=args.co_occur_window_size,
+        phase3_epochs=args.epochs,
+        phase3_learning_rate=args.learning_rate,
+    )
 
     set_random_seed(config.random_seed)
 
     loader = DatasetLoader(expected_candidate_count=20)
-    bundle = loader.load_ml100k(
+    bundle = loader.load_dataset(
+        config.dataset_name,
         str(config.train_path),
         str(config.test_path),
         str(config.info_path),
