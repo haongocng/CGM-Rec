@@ -16,9 +16,6 @@ from constants import (
     DEFAULT_WARMUP_COUNT,
     DEFAULT_WARMUP_MODE,
     DEFAULT_WARMUP_RATIO,
-    INFO_FILENAME,
-    TEST_FILENAME,
-    TRAIN_FILENAME,
 )
 
 
@@ -40,13 +37,23 @@ class Phase1Config:
     phase3_learning_rate: float = DEFAULT_PHASE3_LEARNING_RATE
 
     def __post_init__(self) -> None:
+        """Resolve dataset file paths.
+
+        File naming convention: underscores are removed from the dataset
+        identifier to form the file stem, e.g.:
+          ml_100k  → train_ml100k.json / test_ml100k.json / info_ml100k.json
+          ml_1m    → train_ml1m.json   / test_ml1m.json   / info_ml1m.json
+          bundle   → train_bundle.json / test_bundle.json / info_bundle.json
+          games    → train_games.json  / test_games.json  / info_games.json
+        """
         dataset_dir = self.dataset_root / self.dataset_name
+        file_stem = self.dataset_name.replace("_", "")
         if self.train_path is None:
-            self.train_path = dataset_dir / TRAIN_FILENAME
+            self.train_path = dataset_dir / f"train_{file_stem}.json"
         if self.test_path is None:
-            self.test_path = dataset_dir / TEST_FILENAME
+            self.test_path = dataset_dir / f"test_{file_stem}.json"
         if self.info_path is None:
-            self.info_path = dataset_dir / INFO_FILENAME
+            self.info_path = dataset_dir / f"info_{file_stem}.json"
 
 
 def default_config(project_root: str | Path) -> Phase1Config:
