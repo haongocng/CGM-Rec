@@ -21,6 +21,7 @@ from memory.episodic_memory import EpisodicMemory
 from memory.semantic_memory import SemanticMemory
 from memory.write_policy import WritePolicy
 from memory.writer import MemoryWriter, MemoryWriterConfig
+from model.gat_scorer import GraphAttentionSemanticScorer
 from model.scorer import LinearSemanticScorer
 from retrieval.llm_evidence_builder import LLMEvidenceBuilder
 from retrieval.semantic_retriever import SemanticRetriever
@@ -108,6 +109,24 @@ def build_parser() -> argparse.ArgumentParser:
         type=str,
         default="",
         help="Optional path under cgm/ to save or load scorer weights as JSON.",
+    )
+    parser.add_argument(
+        "--model-path",
+        type=str,
+        default="",
+        help="Optional path under cgm/ to save or load a non-JSON scorer checkpoint (GAT .pt).",
+    )
+    parser.add_argument(
+        "--scorer-type",
+        default="linear",
+        choices=["linear", "gat"],
+        help="Semantic scorer implementation. Linear preserves the original baseline; gat uses PyTorch graph attention.",
+    )
+    parser.add_argument(
+        "--device",
+        default="auto",
+        choices=["auto", "cuda", "cpu"],
+        help="Torch device for --scorer-type gat. Auto prefers CUDA when available.",
     )
     parser.add_argument(
         "--output-json",
@@ -304,7 +323,45 @@ def build_seed_graph_summary(project_root: Path, args: argparse.Namespace) -> di
     }
 
 
-def build_phase3_train_summary(project_root: Path, args: argparse.Namespace) -> tuple[dict, LinearSemanticScorer]:
+def _new_scorer(args: argparse.Namespace, semantic_memory: SemanticMemory):
+    if args.scorer_type == "gat":
+        return GraphAttentionSemanticScorer(semantic_memory=semantic_memory, device=args.device)
+    return LinearSemanticScorer()
+
+
+def _load_scorer(project_root: Path, args: argparse.Namespace, semantic_memory: SemanticMemory):
+    if args.scorer_type == "gat":
+        if args.model_path:
+            return GraphAttentionSemanticScorer.load(
+                str((project_root / args.model_path).resolve()),
+                semantic_memory=semantic_memory,
+                device=args.device,
+            )
+        _, scorer = build_phase3_train_summary(project_root, args)
+        scorer.semantic_memory = semantic_memory
+        return scorer
+
+    if args.model_json:
+        return LinearSemanticScorer.load(str((project_root / args.model_json).resolve()))
+    _, scorer = build_phase3_train_summary(project_root, args)
+    return scorer
+
+
+def _scorer_summary_fields(args: argparse.Namespace, scorer) -> dict:
+    fields = {
+        "scorer_type": args.scorer_type,
+        "weights": scorer.weights,
+        "bias": scorer.bias,
+    }
+    if args.scorer_type == "gat":
+        fields["device"] = scorer.device
+        fields["model_path"] = args.model_path
+    elif args.model_json:
+        fields["model_json"] = args.model_json
+    return fields
+
+
+def build_phase3_train_summary(project_root: Path, args: argparse.Namespace) -> tuple[dict, object]:
     config, bundle = load_bundle_and_config(project_root, args)
     warmup = split_warmup(
         bundle.train_samples,
@@ -319,7 +376,7 @@ def build_phase3_train_summary(project_root: Path, args: argparse.Namespace) -> 
     ).build(bundle.products, warmup.warmup_samples)
     semantic_memory = SemanticMemory.from_seed_graph(graph)
     retriever = SemanticRetriever(semantic_memory)
-    scorer = LinearSemanticScorer()
+    scorer = _new_scorer(args, semantic_memory)
 
     # --- Dual optimization: neural + structural updates during training ---
     episodic_memory = EpisodicMemory(max_records=args.episodic_max_records)
@@ -351,9 +408,8 @@ def build_phase3_train_summary(project_root: Path, args: argparse.Namespace) -> 
         "average_loss": train_result.average_loss,
         "metrics": train_result.metrics,
         "edit_counts": train_result.edit_counts,
-        "weights": scorer.weights,
-        "bias": scorer.bias,
     }
+    summary.update(_scorer_summary_fields(args, scorer))
     return summary, scorer
 
 
@@ -373,10 +429,7 @@ def build_phase3_test_summary(project_root: Path, args: argparse.Namespace) -> d
     semantic_memory = SemanticMemory.from_seed_graph(graph)
     retriever = SemanticRetriever(semantic_memory)
 
-    if args.model_json:
-        scorer = LinearSemanticScorer.load(str((project_root / args.model_json).resolve()))
-    else:
-        _, scorer = build_phase3_train_summary(project_root, args)
+    scorer = _load_scorer(project_root, args, semantic_memory)
 
     test_result = evaluate_semantic_scorer(
         samples=bundle.test_samples,
@@ -384,7 +437,7 @@ def build_phase3_test_summary(project_root: Path, args: argparse.Namespace) -> d
         scorer=scorer,
         max_examples=10,
     )
-    return {
+    summary = {
         "dataset_name": bundle.dataset_name,
         "phase": "phase3-test",
         "test_samples": len(bundle.test_samples),
@@ -398,9 +451,9 @@ def build_phase3_test_summary(project_root: Path, args: argparse.Namespace) -> d
             }
             for example in test_result.examples
         ],
-        "weights": scorer.weights,
-        "bias": scorer.bias,
     }
+    summary.update(_scorer_summary_fields(args, scorer))
+    return summary
 
 
 def build_phase4_test_summary(project_root: Path, args: argparse.Namespace) -> dict:
@@ -419,10 +472,7 @@ def build_phase4_test_summary(project_root: Path, args: argparse.Namespace) -> d
     semantic_memory = SemanticMemory.from_seed_graph(graph)
     retriever = SemanticRetriever(semantic_memory)
 
-    if args.model_json:
-        scorer = LinearSemanticScorer.load(str((project_root / args.model_json).resolve()))
-    else:
-        _, scorer = build_phase3_train_summary(project_root, args)
+    scorer = _load_scorer(project_root, args, semantic_memory)
 
     episodic_memory = EpisodicMemory(max_records=args.episodic_max_records)
     diagnostics = HybridDiagnostics(semantic_memory)
@@ -441,7 +491,7 @@ def build_phase4_test_summary(project_root: Path, args: argparse.Namespace) -> d
         episodic_memory=episodic_memory,
         max_examples=10,
     )
-    return {
+    summary = {
         "dataset_name": bundle.dataset_name,
         "phase": "phase4-test-online",
         "test_samples": len(bundle.test_samples),
@@ -462,9 +512,9 @@ def build_phase4_test_summary(project_root: Path, args: argparse.Namespace) -> d
             for example in test_result.examples
         ],
         "audit_log_preview": test_result.audit_log[:10],
-        "weights": scorer.weights,
-        "bias": scorer.bias,
     }
+    summary.update(_scorer_summary_fields(args, scorer))
+    return summary
 
 
 def build_phase5_test_summary(project_root: Path, args: argparse.Namespace) -> dict:
@@ -484,10 +534,7 @@ def build_phase5_test_summary(project_root: Path, args: argparse.Namespace) -> d
     semantic_memory = SemanticMemory.from_seed_graph(graph)
     retriever = SemanticRetriever(semantic_memory)
 
-    if args.model_json:
-        scorer = LinearSemanticScorer.load(str((project_root / args.model_json).resolve()))
-    else:
-        _, scorer = build_phase3_train_summary(project_root, args)
+    scorer = _load_scorer(project_root, args, semantic_memory)
 
     samples = bundle.test_samples
     if args.max_test_samples > 0:
@@ -525,7 +572,7 @@ def build_phase5_test_summary(project_root: Path, args: argparse.Namespace) -> d
         evidence_builder=LLMEvidenceBuilder(),
         max_examples=10,
     )
-    return {
+    summary = {
         "dataset_name": bundle.dataset_name,
         "phase": "phase5-test-llm",
         "llm_provider": args.llm_provider,
@@ -554,9 +601,9 @@ def build_phase5_test_summary(project_root: Path, args: argparse.Namespace) -> d
             for example in test_result.examples
         ],
         "audit_log_preview": test_result.audit_log[:10],
-        "weights": scorer.weights,
-        "bias": scorer.bias,
     }
+    summary.update(_scorer_summary_fields(args, scorer))
+    return summary
 
 
 def print_summary(summary: dict) -> None:
@@ -631,6 +678,7 @@ def print_phase3_train_summary(summary: dict) -> None:
     print(f"Learning rate         : {summary['learning_rate']}")
     print(f"Average loss          : {summary['average_loss']:.6f}")
     print(f"Metrics               : {summary['metrics']}")
+    _print_scorer_runtime(summary)
     if summary.get("edit_counts"):
         print(f"Structural edits      : {summary['edit_counts']}")
     print("Weights               :")
@@ -647,6 +695,7 @@ def print_phase3_test_summary(summary: dict) -> None:
     print(f"Dataset               : {summary['dataset_name']}")
     print(f"Test samples          : {summary['test_samples']}")
     print(f"Metrics               : {summary['metrics']}")
+    _print_scorer_runtime(summary)
     print("Example predictions   :")
     for example in summary["examples"]:
         print(
@@ -663,6 +712,7 @@ def print_phase4_test_summary(summary: dict) -> None:
     print(f"Dataset               : {summary['dataset_name']}")
     print(f"Test samples          : {summary['test_samples']}")
     print(f"Metrics               : {summary['metrics']}")
+    _print_scorer_runtime(summary)
     print(f"Edit counts           : {summary['edit_counts']}")
     print(f"Episodic summary      : {summary['episodic_summary']}")
     print(f"Semantic summary      : {summary['semantic_summary']}")
@@ -684,6 +734,7 @@ def print_phase5_test_summary(summary: dict) -> None:
     print(f"LLM provider          : {summary['llm_provider']}")
     print(f"Test samples          : {summary['test_samples']} / {summary['full_test_samples']}")
     print(f"Metrics               : {summary['metrics']}")
+    _print_scorer_runtime(summary)
     print(f"Parser valid rate     : {summary['parser_valid_rate']:.4f}")
     print(f"Fallback rate         : {summary['fallback_rate']:.4f}")
     print(f"Lesson valid rate     : {summary['lesson_valid_rate']:.4f}")
@@ -698,6 +749,14 @@ def print_phase5_test_summary(summary: dict) -> None:
             f"final_top5={example['final_top5']}"
         )
     print("=" * 72)
+
+
+def _print_scorer_runtime(summary: dict) -> None:
+    if "scorer_type" not in summary:
+        return
+    print(f"Scorer                : {summary['scorer_type']}")
+    if summary.get("device"):
+        print(f"Device                : {summary['device']}")
 
 
 def _collect_test_only_titles(bundle) -> list[str]:
@@ -732,7 +791,7 @@ def main() -> int:
     args = parser.parse_args()
     project_root = Path(__file__).resolve().parent
 
-    scorer_to_save: LinearSemanticScorer | None = None
+    scorer_to_save: object | None = None
 
     if args.view == "data":
         summary = build_summary(project_root, args)
@@ -763,7 +822,11 @@ def main() -> int:
         summary = build_phase5_test_summary(project_root, args)
         print_phase5_test_summary(summary)
 
-    if args.model_json and scorer_to_save is not None:
+    if args.scorer_type == "gat" and args.model_path and scorer_to_save is not None:
+        model_path = project_root / args.model_path
+        scorer_to_save.save(str(model_path))
+        print(f"Saved GAT scorer checkpoint to {model_path}")
+    elif args.model_json and scorer_to_save is not None:
         model_path = project_root / args.model_json
         scorer_to_save.save(str(model_path))
         print(f"Saved scorer weights to {model_path}")

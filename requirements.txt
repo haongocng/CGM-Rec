@@ -1,2 +1,4 @@
 langchain-core
 langchain-openai
+numpy
+torch
