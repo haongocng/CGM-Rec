@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field
 
+from utils.text import normalize_item_name
+
 
 @dataclass(slots=True)
 class ParsedRerank:
@@ -19,7 +21,7 @@ class RerankOutputParser:
     def parse(self, raw_response: str, candidate_items: list[str]) -> ParsedRerank:
         errors: list[str] = []
         try:
-            payload = json.loads(raw_response)
+            payload = json.loads(self._extract_json(raw_response))
         except json.JSONDecodeError as exc:
             return ParsedRerank(
                 ranked_titles=[],
@@ -35,22 +37,28 @@ class RerankOutputParser:
             errors.append("recommendations_not_list")
             recommendations = []
 
-        candidates_by_normalized = {self._norm(item): item for item in candidate_items}
+        candidates_by_normalized = {normalize_item_name(item): item for item in candidate_items}
         seen: set[str] = set()
         ranked: list[str] = []
         for item in recommendations:
-            key = self._norm(str(item))
+            item_text = self._extract_item_text(item)
+            key = normalize_item_name(item_text)
             if key not in candidates_by_normalized:
-                errors.append(f"unknown_candidate:{item}")
+                errors.append(f"unknown_candidate:{item_text}")
                 continue
             if key in seen:
-                errors.append(f"duplicate_candidate:{item}")
+                errors.append(f"duplicate_candidate:{item_text}")
                 continue
             seen.add(key)
             ranked.append(candidates_by_normalized[key])
 
         if len(ranked) != len(candidate_items):
             errors.append(f"expected_{len(candidate_items)}_items_got_{len(ranked)}")
+            for candidate in candidate_items:
+                key = normalize_item_name(candidate)
+                if key not in seen:
+                    seen.add(key)
+                    ranked.append(candidate)
 
         return ParsedRerank(
             ranked_titles=ranked,
@@ -61,5 +69,27 @@ class RerankOutputParser:
         )
 
     @staticmethod
-    def _norm(value: str) -> str:
-        return " ".join(value.strip().lower().split())
+    def _extract_json(raw_response: str) -> str:
+        response = str(raw_response).strip()
+        if response.startswith("```"):
+            lines = response.splitlines()
+            if lines and lines[0].strip().startswith("```"):
+                lines = lines[1:]
+            if lines and lines[-1].strip() == "```":
+                lines = lines[:-1]
+            response = "\n".join(lines).strip()
+
+        start = response.find("{")
+        end = response.rfind("}")
+        if start != -1 and end != -1 and start < end:
+            return response[start : end + 1]
+        return response
+
+    @staticmethod
+    def _extract_item_text(item: object) -> str:
+        if isinstance(item, dict):
+            for key in ("title", "item", "name", "product"):
+                value = item.get(key)
+                if value:
+                    return str(value)
+        return str(item)

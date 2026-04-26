@@ -19,7 +19,7 @@ from memory.schema import EditProposal, LessonPayload
 from memory.semantic_memory import SemanticEdgeState, SemanticMemory
 from model.scorer import CandidateScore, ScoreOutput
 from retrieval.semantic_retriever import RetrievalBundle
-from utils.text import normalize_title
+from utils.text import normalize_item_name, normalize_title
 
 
 @dataclass(slots=True)
@@ -404,8 +404,9 @@ class HybridDiagnostics:
         return None
 
     def _get_rank(self, ranked_titles: list[str], title: str) -> int:
+        title_normalized = normalize_item_name(title)
         for idx, candidate in enumerate(ranked_titles):
-            if candidate == title:
+            if normalize_item_name(candidate) == title_normalized:
                 return idx + 1
         return 999
 

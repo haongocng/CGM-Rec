@@ -14,6 +14,7 @@ from memory.writer import MemoryWriter
 from model.scorer import CandidateScore, LinearSemanticScorer, ScoreOutput
 from retrieval.llm_evidence_builder import LLMEvidenceBuilder
 from retrieval.semantic_retriever import SemanticRetriever
+from utils.text import normalize_item_name
 
 
 @dataclass(slots=True)
@@ -275,7 +276,8 @@ def _reorder_score_output(output: ScoreOutput, ranked_titles: list[str]) -> Scor
 
 
 def _get_rank(predictions: list[str], target: str) -> int:
+    target_normalized = normalize_item_name(target)
     for idx, candidate in enumerate(predictions):
-        if candidate == target:
+        if normalize_item_name(candidate) == target_normalized:
             return idx + 1
     return 999

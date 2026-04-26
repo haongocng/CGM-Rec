@@ -4,10 +4,13 @@ from __future__ import annotations
 
 import math
 
+from utils.text import normalize_item_name
+
 
 def get_rank(predictions: list[str], target: str) -> int:
+    target_normalized = normalize_item_name(target)
     for idx, candidate in enumerate(predictions):
-        if candidate == target:
+        if normalize_item_name(candidate) == target_normalized:
             return idx + 1
     return 999
 
@@ -22,7 +25,7 @@ def ndcg_at_k(rank: int, k: int) -> float:
     return 1.0 / math.log2(rank + 1)
 
 
-def evaluate_predictions(predictions: list[list[str]], targets: list[str], ks: tuple[int, ...] = (1, 5, 10, 15, 20)) -> dict[str, float]:
+def evaluate_predictions(predictions: list[list[str]], targets: list[str], ks: tuple[int, ...] = (1, 5, 10, 20)) -> dict[str, float]:
     ranks = [get_rank(prediction, target) for prediction, target in zip(predictions, targets)]
     metrics: dict[str, float] = {}
     if not ranks:
